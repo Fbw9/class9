@@ -13,3 +13,9 @@ ul {
 	border: 1vh double black;
 	background-color: rgba(0,0,0,.0);
 }
+li {
+	list-style: none;
+    display: inline;
+    margin-left: 17%;
+    font-size: 30px;
+}
