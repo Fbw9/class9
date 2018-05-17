@@ -20,3 +20,7 @@ li {
     margin-left: 17%;
     font-size: 30px;
 }
+a {
+	text-decoration: none;
+	color: black;
+}
