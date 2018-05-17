@@ -1,0 +1,36 @@
+.header{
+	font-size: 50px;
+	color: yellow; 
+	font-weight: bold;
+   	display: flex;
+	justify-content: center;
+	background-color: red;
+	border: 2px;
+	border-style: solid;
+	border-color: blue;
+	border-radius: 45px;
+color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+#boddy{
+	display: flex;
+	justify-content: center;
+}
+p{
+	font-size: 40px;
+	color: black; 
+	font-weight: bold;
+    display: flex;
+	justify-content: center;
+	background-color: red;
+	border: 2px;
+	border-style: solid;
+	border-color: blue;
+	border-radius: 45px;
+	color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+.photo{
+	  margin-left : 500px;
+	  border-radius: 45px;
+}
