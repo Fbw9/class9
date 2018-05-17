@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My fabulous gun</title>
+</head>
+<body>
+<h1>test</h1>
+<form>
+    <input val=""><button>Add</button>
+</form>
+
+<ul></ul>
+<!--<script src="https://morning-cliffs-98210.herokuapp.com/gun.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="node_modules/gun/gun.js"></script>
+<script>
+  // connects to your server
+    var gun = Gun('https://morning-cliffs-98210.herokuapp.com/gun');
+    var list = gun.get('list');
+    var inputField = $('input');
+    $('form').on('submit', function(event){
+        event.preventDefault();
+        list.set(inputField.val());
+        inputField.val("");
+    });
+    list.map().on(function(item, id){
+        var li = $('#'+id).get(0) || $('<li>').attr('id', id).appendTo('ul');
+        if(item){
+            $(li).text(item);
+        }else{ $(li).hide();}
+    });
+    $('body').on('dblclick', 'li', function(event){
+        list.get(this.id).put(null);
+    });
+</script>
+</body>
+</html>
