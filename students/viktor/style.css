@@ -6,9 +6,10 @@ body {
 h1 {
 	font-family: 'Cinzel', sans-serif;
 	color: black;
+	margin-left: 45%;
 }
 ul {
-    margin-right: 1vh;
+	border-collapse: collapse;
 	margin: 1vh 1vh;
 	border: 1vh double black;
 	background-color: rgba(0,0,0,.0);
