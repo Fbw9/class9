@@ -1,20 +1,45 @@
+.bg {
 
-div {
-	border: 1px solid #666;
-    height: 200px;
-    text-align: center;
-    width: 150px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(background.jpg);
 }
 
-h3 {
-    height: inherit;
-    vertical-align: bottom;
-    background-color: pink; /* optional to show extent of element */
-    margin: 0;
-    display: table-cell;
-}
-h3:after { /* trick to add bottom padding */
-    content: '';
+h1 {
     display: block;
-    height: 10px; 
+    font-size: 2em;
+    margin-top: 1.67em;
+    margin-bottom: 0.67em;
+    margin-left: 1.60em;
+    margin-right: 0;
+    font-weight: bold;
+    color: white;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+p {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 1.67em;
+    margin-bottom: 0.67em;
+    margin-left: 2em;
+    margin-right: 0;
+    font-weight: bold;
+    color: white;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;f;
+}
+
+a {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 1.67em;
+    margin-bottom: 0.67em;
+    margin-left: 2em;
+    margin-right: 0;
+    font-weight: bold;
+    color: #355C7D;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;f;
 }
