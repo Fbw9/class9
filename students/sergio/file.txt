@@ -1,0 +1,7 @@
+Hallo,
+
+i m a new file to test how git reset, git stash and git revert
+and now i m in master
+
+
+new info: this info was written in sergio-newBranch
