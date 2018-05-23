@@ -182,6 +182,18 @@ Search the working directory for foo():
 git grep "foo()"
 ```
 
+##### Fix the last commit message
+
+Scenario: You just typo’d the last commit message, you did git commit -m "Fxies bug #42" but before git push you realized that really should say “Fixes bug #42”.
+
+```
+git commit --amend -m "Fixed commit message"
+```
+
+What’s happening: git commit --amend will update and replace the most recent commit with a new commit that combines any staged changes with the contents of the previous commit. With nothing currently staged, this just rewrites the previous commit message.
+Undo “lo
+
+
 
 #### More Git Resources
 
