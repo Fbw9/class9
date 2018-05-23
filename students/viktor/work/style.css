@@ -1,0 +1,25 @@
+body {
+	background: url("../work/city.jpg") no-repeat;
+	width: 100px;
+	height: 100vh;
+	display: inline;
+	background-size: 100%;
+	background-attachment: fixed;
+	text-align: center;
+}
+h1 {
+    color: white;
+    font-size: 10vh;
+
+}
+h2 {
+	color: white;
+}
+a {
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+    left: 44.5%;
+    top: 44.5%;
+    position: relative;
+}

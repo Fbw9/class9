@@ -203,7 +203,7 @@ What’s happening: git revert will create a new commit that’s the opposite (o
 
 This is Git’s safest, most basic “undo” scenario, because it doesn’t alter history—so you can now git push the new “inverse” commit to undo your mistaken commit.
 
-##### Reset “local” changes
+##### git reset - Reset “local” changes
 
 You’ve made some commits locally (not yet pushed), but everything is terrible, you want to undo the last three commits—like they never happened.
 
@@ -212,6 +212,36 @@ git reset --hard <last good SHA>
 ```
 
 What’s happening: git reset rewinds your repository’s history all the way back to the specified SHA. It’s as if those commits never happened. By default, git reset preserves the working directory. The commits are gone, but the contents are still on disk. This is the safest option, but often, you’ll want to “undo” the commits and the changes in one move—that’s what --hard does.
+
+
+##### Stashing your work
+
+The git stash command takes your uncommitted changes (both staged and unstaged), saves them away for later use, and then reverts them from your working copy.
+
+```
+git stash "Some description"
+git stash list
+```
+
+
+##### Re-applying your stashed changes
+
+You can reapply previously stashed changes with git stash pop:
+
+```
+$ git stash pop 
+```
+
+Popping your stash removes the changes from your stash and reapplies them to your working copy.
+
+Alternatively, you can reapply the changes to your working copy and keep them in your stash with git stash apply:
+
+```
+$ git stash apply
+```
+
+This is useful if you want to apply the same stashed changes to multiple branches. 
+
 
 
 #### More Git Resources
