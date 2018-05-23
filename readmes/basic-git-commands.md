@@ -30,7 +30,7 @@ For a remote server, use:
 git clone username@host:/path/to/repository
 ```
 
-##### Add files
+###### Add files
 
 Add one or more files to staging (index): 	
 
@@ -192,7 +192,7 @@ git commit --amend -m "Fixed commit message"
 What’s happening: git commit --amend will update and replace the most recent commit with a new commit that combines any staged changes with the contents of the previous commit. With nothing currently staged, this just rewrites the previous commit message.
 
 
-# Undo “local” changes
+##### Undo “local” changes
 
 ```
 git checkout -- example.html
