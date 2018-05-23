@@ -183,16 +183,22 @@ git grep "foo()"
 ```
 
 ##### Fix the last commit message with "commit --amend"
-
-Scenario: You just typo’d the last commit message, you did git commit -m "Fxies bug #42" but before git push you realized that really should say “Fixed commit message”.
+You just typo’d the last commit message, you did git commit -m "Fxies bug #42" but before git push you realized that really should say “Fixed commit message”.
 
 ```
 git commit --amend -m "Fixed commit message"
 ```
 
 What’s happening: git commit --amend will update and replace the most recent commit with a new commit that combines any staged changes with the contents of the previous commit. With nothing currently staged, this just rewrites the previous commit message.
-Undo “lo
 
+
+# Undo “local” changes
+
+```
+git checkout -- example.html
+```
+
+What’s happening: git checkout alters files in the working directory to a state previously known to Git. You could provide a branch name or specific SHA you want to go back to or, by default, Git will assume you want to checkout HEAD, the last commit on the currently-checked-out branch.
 
 
 #### More Git Resources
