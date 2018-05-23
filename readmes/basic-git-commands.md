@@ -182,9 +182,9 @@ Search the working directory for foo():
 git grep "foo()"
 ```
 
-##### Fix the last commit message
+##### Fix the last commit message with "commit --amend"
 
-Scenario: You just typo’d the last commit message, you did git commit -m "Fxies bug #42" but before git push you realized that really should say “Fixes bug #42”.
+Scenario: You just typo’d the last commit message, you did git commit -m "Fxies bug #42" but before git push you realized that really should say “Fixed commit message”.
 
 ```
 git commit --amend -m "Fixed commit message"
