@@ -5,3 +5,4 @@ and now i m in master
 
 
 new info: this info was written in sergio-newBranch
+second info: this is other info, noe written in sergio-newBranch2
