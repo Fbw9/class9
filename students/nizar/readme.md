@@ -1,0 +1,5 @@
+- at least one heading element
+- two text blocks
+- at least one list element
+- one or more links
+- mark some words as bold or italic
