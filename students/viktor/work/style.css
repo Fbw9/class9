@@ -1,5 +1,5 @@
 body {
-	background: url("../work/city.jpg") no-repeat;
+	background: url("../work/background.jpg") no-repeat;
 	width: 100px;
 	height: 100vh;
 	display: inline;
@@ -8,16 +8,16 @@ body {
 	text-align: center;
 }
 h1 {
-    color: white;
+    color: black;
     font-size: 10vh;
 
 }
 h2 {
-	color: white;
+	color: black;
 }
 a {
 	text-decoration: none;
-	color: white;
+	color: black;
 	display: inline-block;
     left: 44.5%;
     top: 44.5%;
