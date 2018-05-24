@@ -16,4 +16,4 @@ Mauris ac scelerisque purus, eu scelerisque ante. **Vivamus bibendum mollis tinc
 	* Nunc dapibus hendrerit m
 
 
-[Lorem ipsum generator](www.lipsum.com)
+[Lorem ipsum generator](https://www.lipsum.com)
