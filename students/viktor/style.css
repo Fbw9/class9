@@ -1,0 +1,26 @@
+body {
+	width: 100%;
+	height: 100%;
+	background-color: darkgreen;
+}
+h1 {
+	font-family: 'Cinzel', sans-serif;
+	color: black;
+	margin-left: 45%;
+}
+ul {
+	border-collapse: collapse;
+	margin: 1vh 1vh;
+	border: 1vh double black;
+	background-color: rgba(0,0,0,.0);
+}
+li {
+	list-style: none;
+    display: inline;
+    margin-left: 17%;
+    font-size: 30px;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
