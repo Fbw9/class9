@@ -21,3 +21,12 @@ margin-left: 100px;
 ul{
     list-style-type: none;
 }
+.picture{
+    width: 40px;height: 20px;
+}
+.container{
+    margin-top:0;
+    width:200px;
+    height: 250px;
+    border:1px solid red;
+}
