@@ -1,0 +1,44 @@
+
+*{
+	margin:0;
+	padding: 0;
+}
+body {
+	background:#eee;
+	color: #333;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:14px;
+}
+
+#container{
+	width:90%;
+}
+#header, #footer{
+	background: #333;
+	padding: 30px;
+	margin: 10px;
+	color: white;
+
+}
+h1, h2, h3 {
+	color: #ed7000;
+}
+.lead{
+	font-size: 18px;
+}
+#footer {
+	text-align: center;
+}
+.blog-post{
+	background: #fff;
+	padding: 30px;
+	margin:0 10px 10px;
+	
+}
+.blog-post em{
+	color: #ccc;
+}
+.blog-post h2, .blog-post p {
+	margin-bottom:10px;
+}
+
