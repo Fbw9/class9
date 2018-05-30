@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)file:///media/dci/1CF4-6FEA/exercises-html/defining_font_sizes.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <style>
+        body,
+        html {
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        .first {
+            font-size: 60px;
+        }
+
+        .first h1 {
+            font-size: 2rem;
+        }
+
+        .first div {
+            font-size: 1.2rem;
+        }
+
+        /*.first:last-child {
+            font-size: 1.9em;
+        }*/
+
+        #last-child {
+            font-size: 1.5em;
+
+        }
+
+        /*/////////////////////////////////////////*/
+
+        .second {
+            font-size: 13px;
+        }
+
+        .second h1 {
+            font-size: 2em;
+        }
+
+        .second div {
+            font-size: 1.3em;
+
+        }
+
+        /*/////////////////////////////////////////*/
+        .third{
+            font-size: 21px;
+        }
+
+        .third h1{
+            font-size: 1em;
+        }
+        .third div{
+            font-size: 1.4em;
+        }
+
+        #third1 {
+            font-size: 1rem;
+        }
+        #third2 {
+            font-size: 1.3rem;
+        }
+        #third3 {
+            font-size: 0.4em;
+        }
+        #third4 {
+            font-size: 1.6em;
+        }
+    
+    </style>
+</head>
+
+<body>
+
+    <div class="first">
+        first-parent-div
+        <h1>Heading is relative to the root size</h1>
+        <div>Text is relative to the root size</div>
+        <div id="last-child">Text is relative to the parent.</div>
+    </div>
+
+    <div class="second">
+        second-parent-div
+        <h1>Heading is relative to the parent</h1>
+        <div>Text is relative to the parent.</div>
+    </div>
+
+    <div class="third">
+        third-parent-div
+        <h1>Heading is relative to the parent</h1>
+        <div>This is relative to the parent.</div>
+        <div>
+            <h1 id="third1">Heading is relative to the root size</h1>
+            <div id="third2">Text is relative to the root size.</div>
+        </div>
+        <div>
+            <h1 id="third3">Heading is relative to the parent</h1>
+            <div id="third4">Text is relative to the parent.</div>
+        </div>
+    </div>
+
+    <div>Use relative and absolute units (px, rem, em);</div>
+
+
+</body></html>
