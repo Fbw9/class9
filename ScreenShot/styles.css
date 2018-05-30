@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: lightgrey;
+  font-family: Helvetica, Arial, sans-serif;
+  max-width: 1200px;
+}
+
+header {
+  margin: 10px;
+  padding: 30px;
+  background-color: black;
+}
+
+span {
+  color: white;
+}
+
+h1, h2, h4 {
+  margin: 0;
+  font-weight: bold;
+  color: orange;
+}
+
+p {
+  font-size:14px;
+}
+
+header p {
+  color: white;
+}
+
+p i {
+  color: lightgrey;
+}
+
+div {
+  background-color: white;
+  margin: 10px;
+  padding: 30px;
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+  margin: 10px;
+  padding: 30px;
+  color: white;
+}
