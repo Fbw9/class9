@@ -1,0 +1,71 @@
+<html>
+<head>
+    <style>
+
+    html {
+      font-size: 16px;
+    }
+
+    .first-parent h1 {
+      font-size: 3rem;
+    }
+
+    .one {
+      font-size: 0.5rem;
+    }
+
+    .two {
+      font-size: 2.5em;
+    }
+
+    .second-parent h1, .second-parent div {
+      font-size: 2.5em;
+    }
+
+    .third-parent h1, .third-parent div {
+      font-size: 3em;
+    }
+
+    .fourth-parent h1 {
+      font-size: 0.5rem;
+    }
+
+    .fourth-parent div {
+      font-size: 4rem;
+    }
+
+    .fifth-parent h1 {
+      font-size: 1em;
+    }
+
+    .fifth-parent div {
+      font-size: 0.5em;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="first-parent">
+        <h1>Heading is relative to the root size FIRST PARENT</h1>
+        <div class="one">Text is relative to the root size</div>
+        <div class="two">Text is relative to the parent.</div>
+    </div>
+    <div class="second-parent">
+        <h1>Heading is relative to the parent SECOND PARENT</h1>
+        <div>Text is relative to the parent.</div>
+    </div>
+    <div class="third-parent">
+        <h1>Heading is relative to the parent THIRD PARENT</h1>
+        <div>This is relative to the parent.</div>
+        <div class="fourth-parent">if
+            <h1>Heading is relative to the root size FOURTH PARENT</h1>
+            <div>Text is relative to the root size.</div>
+        </div>
+        <div class="fifth-parent">
+            <h1>Heading is relative to the parent FIFTH PARENT</h1>
+            <div>Text is relative to the parent.</div>
+        </div>
+    </div>
+</body>
+</html>
