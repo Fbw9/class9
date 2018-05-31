@@ -1,0 +1,133 @@
+
+.global  {
+    border: 3px solid black;
+    height: 340px;
+    padding: 20px;
+}
+
+/*First Line*/
+.first {
+    height: 100px;
+    background-color: rgb(228, 216, 228);
+    position: relative;
+    height: 100px;
+}
+
+
+
+.first_box1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 70px;
+    background-color: blueviolet;
+    border: 3px solid black;
+}
+
+.first_box2 {
+    position: absolute;
+    top: 30px;
+    left: 40%;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(226, 43, 43);
+    z-index: +3;
+}
+
+.first_box3 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    height: 70px;
+    background-color: blueviolet;
+    border: 3px solid black;
+}
+
+.first_box4 {
+    position: absolute;
+    top: 105px;
+    left: 20%;
+    width: 200px;
+    height: 120px;
+    background-color: rgb(60, 206, 31);
+}
+
+.first_box5 {
+    position: absolute;
+    top: 105px;
+    left: 60%;
+    width: 200px;
+    height: 120px;
+    background-color: rgb(203, 206, 31);
+    z-index: +4;
+}
+
+.first_box6 {
+    position: absolute;
+    top: 200px;
+    left: 40%;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(32, 32, 29);
+    z-index: +5;
+}
+
+.madness {
+    position: absolute;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    top: 140px;
+    left: 33%;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(164, 193, 196);
+    z-index: +5;
+}
+
+/*Second Line*/
+
+.second {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(228, 216, 228);
+    position: relative;
+    top: 15px;
+    z-index: -1;
+}
+
+/*Third Line*/
+
+.third {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(228, 216, 228);
+    position: relative;
+    top: 33px;
+}
+
+
+.first_box7 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 70px;
+    background-color: blueviolet;
+    border: 3px solid black;
+}
+
+.first_box8 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    height: 70px;
+    background-color: blueviolet;
+    border: 3px solid black;
+}
