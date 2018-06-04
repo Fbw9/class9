@@ -1,0 +1,25 @@
+body {
+  font-family: cursive;
+}
+caption {
+  text-align: left;
+  margin-bottom: 5px;
+}
+table, td, th {
+  border: 2px solid grey;
+  border-collapse: collapse;
+  padding: 25px;
+  text-align: center;
+}
+ table {
+   width: 70%;
+ }
+thead {
+  background-color: lightgrey;
+}
+tbody {
+  font-style: italic;
+}
+tr:nth-child(odd) td {
+  background-color: lightblue;
+}

@@ -1,0 +1,22 @@
+table, th, td {
+  border: 4px solid blue;
+  border-collapse: collapse;
+  background-color: lightgrey;
+  font-family: cursive;
+  color: white;
+  padding: 20px;
+}
+
+th {
+  background: white;
+  color: black;
+  border: none;
+}
+tr:nth-child(6) {
+  background-color: grey;
+}
+tr:nth-child(odd) td{
+  background-color: lightblue;
+  vertical-align: bottom;
+  height: 50px;
+}
