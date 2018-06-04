@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Floats</title>
+        <style>
+            html, body {
+                padding: 10px;
+                margin: 0;
+            }
+            .container {
+                border: 2px solid lightgrey;
+                padding: 0 20px;
+                position: relative;
+                margin:0 auto;
+                max-width: 480px;
+            }
+            .overlay {
+                background-color: rgba(0, 0, 0, 0.4);
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right:  ;
+            }
+            .dialog {
+                width: 500px;
+                background-color: white;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -250px;
+                margin-top: -100px;
+            }
+            .dialog-header {
+                padding: 20px;
+                background-color: blue;
+                color: white;
+            }
+            .dialog-body {
+                padding: 20px;
+                background-color: white;
+            }
+            .button {
+                padding: 10px;
+                margin-left: 10px;
+            }
+            .buttons-container {
+                text-align: right;
+            }
+            .float-right {
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <h2>This is my Blog!</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum,
+                nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget,
+                 auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+                 lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi,
+                 sed ullamcorper ipsum dignissim ac...
+             </p>
+
+             <p>
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum,
+                 nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget,
+                  auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+                  lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi,
+                  sed ullamcorper ipsum dignissim ac...
+              </p>
+
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum,
+                  nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget,
+                   auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+                   lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi,
+                   sed ullamcorper ipsum dignissim ac...
+               </p>
+        </div>
+
+        <div class="overlay">
+            <div class="dialog">
+                <div class="dialog-header">
+                    <div class="float-right">x</div>
+                    Delete all your files?
+                </div>
+                <div class="dialog-body">
+                    Do you know what are you doing here?
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum,
+                    nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget,
+                     auctor vitae massa.
+
+                     <div class="buttons-container">
+                         <button class="button">Cancel</button>
+                         <button class="button">Delete</button>
+                     </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

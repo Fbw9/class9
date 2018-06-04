@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Absolute Relative</title>
+        <style>
+            html, body {
+                padding: 0;
+                margin: 0;
+            }
+            .container {
+                border: 5px solid grey;
+                padding: 10px;
+                position: relative;
+            }
+            nav {
+                position: absolute;
+                width: 200px;
+                background-color: lightgrey;
+            }
+            section {
+                position: relative;
+                margin-left: 220px;
+                border: 5px solid black;
+            }
+            section:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            footer {
+                position: fixed;
+                border: 5px solid grey;
+                position: fixed;
+                  bottom: 0;
+              left: 0;
+              height: 90px;
+              background-color: lightgrey;
+              width: 100%;
+              padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+
+<div class="container">
+
+  <nav class="elem elem-red">
+    <span class="label">&lt;nav&gt;</span>
+    <ul>
+      <li>
+        <a href="position-example.html">menu point 1</a>
+      </li>
+      <li>
+        <a href="position-example.html">menu point 2</a>
+      </li>
+      <li>
+        <a href="position-example.html">menu point 3</a>
+      </li>
+      <li>
+        <a href="position-example.html">menu point 4</a>
+      </li>
+      <li>
+        <a href="position-example.html">menu point 5</a>
+      </li>
+      <li>
+        <a href="position-example.html">menu point 6</a>
+      </li>
+    </ul>
+    <span class="endlabel">&lt;/nav&gt;</span>
+  </nav>
+
+  <section class="elem elem-green">
+    <span class="label">&lt;section&gt;</span>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+    </p>
+    <span class="endlabel">&lt;/section&gt;</span>
+  </section>
+
+  <section class="elem elem-green ipsum">
+    <span class="label">&lt;section&gt;</span>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+    </p>
+    <span class="endlabel">&lt;/section&gt;</span>
+  </section>
+
+  <section class="elem elem-green">
+    <span class="label">&lt;section&gt;</span>
+    p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+    </p>
+    <span class="endlabel">&lt;/section&gt;</span>
+  </section>
+
+
+
+
+</div>
+
+<footer class="elem elem-orange">
+<span class="label">&lt;footer&gt;</span>
+<p>position: fixed;</p>
+<span class="endlabel">&lt;/footer&gt;</span>
+</footer>
+
+</body>
+</html>
