@@ -117,17 +117,55 @@ li a {
 
   /*==========ICONS==========*/
 
+  /*==========ICONS==========*/
+
   .icons {
-    
     width: 100%;
-    height: 25%;
-    background-color: #fff;
-    position: relative;
-    
+    background-color: #f7f7f7;
+    text-align: center;
   }
+
+.icons-list {
+    display: table;   /* Allow the centering to work */
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+}
 
   .icon {
-
+    text-align: center;
+    display: inline-block;
+    margin: 0 20px;
+    letter-spacing: 2px;
+  }
+  .icons img{
+      width:100px
   }
 
-  
+  .icon h3 {
+      margin: 15px;
+      color: #cb0037;
+  }
+
+  .icon  p {
+      margin: 5px;
+  }
+
+  .btn-blue-container {
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    padding: 100px 0;
+    position: relative;
+}
+.button-blue {
+    
+    border: 1px solid #264699;
+    border-radius: 25px;
+    width: 200px;
+    height: 50px;
+    font-size: 1rem
+}
+.btn3 {
+    color: #fff;
+    background-color: #264699;;
+}
