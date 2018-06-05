@@ -1,0 +1,82 @@
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  background-image: url(2.jpg);
+}
+
+div {
+  float: left;
+  margin: 40px;
+}
+
+.card1 {
+  width: 220px;
+  height: 310px;
+  border: 1px solid black;
+  background-color: red;
+  background-image: url(q.jpg);
+  background-size: cover;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.card2 {
+  width: 220px;
+  height: 310px;
+  border: 1px solid black;
+  background-color: hsl(300, 100%, 100%);
+  background-image: url(k.jpg);
+  background-size: cover;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.card3 {
+  width: 220px;
+  height: 310px;
+  border: 1px solid black;
+  background-color: blue;
+  background-image: url(j.jpg);
+  background-size: cover;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.card4 {
+  width: 220px;
+  height: 310px;
+  border: 1px solid black;
+  background-color: rgba(204, 0, 102, 0.5);
+  background-image: url(a.jpg);
+  background-size: cover;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.card5 {
+  width: 120px;
+  height: 160px;
+  border: 1px solid black;
+  background: linear-gradient(to bottom right, green, yellow, red) ;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.card6 {
+  width: 120px;
+  height: 160px;
+  border: 1px solid black;
+  background: linear-gradient(to bottom right, rgba(255, 0, 0, 0.5), rgba(255, 102, 0, 0.5)) ;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.card7 {
+  width: 120px;
+  height: 160px;
+  border: 1px solid black;
+  background: radial-gradient(circle, green, yellow, red, green, yellow, red);
+  margin: 10px;
+  border-radius: 5px;
+}
