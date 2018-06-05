@@ -32,7 +32,7 @@ The Hue specifies the base colour as a degree on a colour wheel. Red is at 0°, 
 
 Next we specify the Saturation which is how vibrant the colour is. It has a value between 100 which is full vibrancy and 0 which is dull or grey.
 
-HSL CylinderFinally we specify the Luminance or lightness. It has a value between 0 which is tending towards black and 100 which is tending towards white.
+Finally we specify the Luminance or lightness. It has a value between 0 which is tending towards black and 100 which is tending towards white.
 
 Similar to RGB we may introduce a fourth value for the Alpha level. Similar to RGBA it is a value between 0 and 1.
 
