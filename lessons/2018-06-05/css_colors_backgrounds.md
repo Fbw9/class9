@@ -1,12 +1,14 @@
 ### CSS Colors
-- There are 4 main ways in which we may specify colour in CSS. They are:
+There are 4 main ways in which we may specify colour in CSS. They are:
 - Hexadecimal - eg #48d3c2.
 - RGB - eg rgb(127, 89, 28).
 - HSL - eg. hsl(130, 80%, 24%).
-
-Named - eg. Crimson or DarkBlue.
+- Named - eg. Crimson or DarkBlue.
 
 RGB and HSL also have a mode where we specify an alpha level to indicate opacity.
+
+**Hexadecimal**
+
 With Hexadecimal we specify the colour using a hash symbol ( \# ) followed by 6 hexadecimal digits ( 0-9a-f ). 
 The first 2 hexadecimal digits specify the amount of red, the second 2 the amount of green and the third 2 the amount of blue.
 
