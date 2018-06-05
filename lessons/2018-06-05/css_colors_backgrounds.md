@@ -15,6 +15,12 @@ CSS background properties:
 - background-attachment
 - background-position
 
+With Hexadecimal we specify the colour using a hash symbol ( \# ) followed by 6 hexadecimal digits ( 0-9a-f ). The first 2 hexadecimal digits specify the amount of red, the second 2 the amount of green and the third 2 the amount of blue.
+\#000000 is no red, no green, no blue, which is black.
+\#ffffff is full red, full green, full blue, which is white.
+\#00ff00 is no red, full green, no blue, which is green.
+If you make the values for each of red, green and blue equal then it will be a shade of grey.
+
 [Lesson: CSS Backgrounds](https://www.w3schools.com/css/css_background.asp)
 
 ### CSS background-size Property
