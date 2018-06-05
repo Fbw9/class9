@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Absolute Relative</title>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+        }
+        body {
+            font-size: 14px;
+            color: #777;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+        .welcome-container {
+            background: url(imgs/bg_001.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 60px 20px;
+
+        }
+        .content {
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 40px 0;
+        }
+        h1 {
+            color: #444;
+            margin-bottom: 2rem;
+        }
+        .text-block {
+            display: block;
+            max-width: 340px;
+        }
+        a {
+            color: #50a1ff;
+            text-decoration: none;
+            font-size: 1.125rem;
+        }
+        .hint {
+            color: #bbb;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+        footer {
+            background: url(imgs/bg_002.jpg) no-repeat top;
+            background-size: cover;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .footer-overlay {
+            padding: 10px 20px;
+            background-color: rgba(0,0,0,0.6);
+            margin-bottom: 4rem;
+            color: #FFF;
+            font-size: 0.875rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="welcome-container">
+
+        <div class="content">
+
+            <h1>Cover Background</h1>
+            <p class="text-block">
+                &quot;Color Background&quot; has to be <strong style="color:#444;">H1</strong> colored in
+                <strong style="color:#444;">#444</strong>.
+            </p>
+            <p class="text-block">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            </p>
+
+            <p class="text-block">
+                PLEASE use <strong>#777777</strong> as a color for your &quot;Lorem ipsum&quot;-Text
+                and limit the maximal parafraph (block) width to 340px.
+            </p>
+
+            <br><br>
+            <a href="">The Colored Link *</a>
+
+        </div>
+
+    </div>
+
+    <div class="content">
+        <div class="hint">
+            * &quot;The Colored Link&quot; has to be a link with
+            1.125rem, no decoration and colored with #50a1ff.
+
+            <br><br>
+            Base font-size: 14px;<br>
+            Max content width: 600px;<br>
+            Colors: #444, #777777, #BBB, #50a1ff, #FFF<br>
+            Images: imgs/bg_001.pg, imgs/bg_002.jpg
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-overlay">
+
+            Footer text: centered, #FFF, 0.875rem.<br>
+            Block - background: black 0.6; margin-bottom: 4rem;
+
+        </div>
+    </footer>
+
+</body>
+</html>
