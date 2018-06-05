@@ -1,12 +1,7 @@
 ### CSS Colors
 
 [Lesson: CSS Colors](https://www.w3schools.com/css/css_colors.asp)
-There are 4 main ways in which we may specify colour in CSS. They are:
-Hexadecimal - eg #48d3c2.
-- RGB - eg rgb(127, 89, 28).
-- HSL - eg. hsl(130, 80%, 24%).
-- Named - eg. Crimson or DarkBlue.
-- RGB and HSL also have a mode where we specify an alpha level to indicate opacity.
+
 
 ### CSS Backgrounds
 
@@ -21,3 +16,23 @@ CSS background properties:
 - background-position
 
 [Lesson: CSS Backgrounds](https://www.w3schools.com/css/css_background.asp)
+
+### CSS background-size Property
+
+The background-size property specifies the size of the background images.
+
+There are four different syntaxes you can use with this property: the keyword syntax ("auto", "cover" and "contain"), the one-value syntax (sets the width of the image (height becomes "auto"), the two-value syntax (first value: width of the image, second value: height), and the multiple background syntax (separated with comma).
+
+##### Property Values
+
+Value | Description
+--- | ---
+auto | Default value. The background image is displayed in its original size
+length | Sets the width and height of the background image. The first value sets the width, the second value sets the height. If only one value is given, the second is set to "auto".
+percentage| Sets the width and height of the background image in percent of the parent element. The first value sets the width, the second value sets the height. If only one value is given, the second is set to "auto"	
+cover	| Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges	
+contain	| Resize the background image to make sure the image is fully visible	
+initial	| Sets this property to its default value.	
+inherit	| Inherits this property from its parent element.
+
+[CSS background-size Property - Definition and Usage](https://www.w3schools.com/cssref/css3_pr_background-size.asp)
