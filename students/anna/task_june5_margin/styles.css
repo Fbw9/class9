@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,700');
+
+/*==========GLOBAL==========*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+body, html {
+  font-size: 16px;
+  height: 100%;
+  
+}
+
+.global {
+  height: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+background-image: url("imgs/bg.jpg");
+height: 80%;
+position: relative;
+background-position: center;
+background-size: cover;
+
+
+}
+
+.header-text {
+max-width: 340px;
+
+position: absolute;
+top: 40%;
+left: 40%;
+transform: translate(-40%, -40%);
+color: white;
+letter-spacing: 1px;
+}
+
+.header-text h1 {
+  color: #444;
+}
+
+.header-text p {
+  color: #777777;
+  margin: 30px 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #50a1ff;
+}
+
+a:hover {
+  color: #444;
+}
+
+.after-header {
+  text-align: center;
+  margin: 50px 20px;
+  color: #777777;
+}
+
+.after-header p {
+  margin: 10px 0;
+}
+
+.footer {
+  background: url("imgs/footer.jpg");
+  height: 200px;  
+  text-align: center;
+  color: #fff;
+}
+
+.footer-text {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
