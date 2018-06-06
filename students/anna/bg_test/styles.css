@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+}
+
+body {
+  
+
+}
+div {
+  position: relative;
+  margin: auto;
+  max-width: 1200px;
+}
+
+div img {
+  width: 100%; 
+}
+.text {
+ position: relative;
+ top: 20%;
+
+}
