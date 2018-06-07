@@ -12,23 +12,22 @@
 body, html {
   font-size: 16px;
   height: 100%;
-  margin: 0;
+  
 }
-
 
 .header {
 background-image: url("imgs/bg.jpg");
 height: 80%;
 position: relative;
 background-position: center;
-background-repeat: no-repeat;
 background-size: cover;
 
 
 }
 
 .header-text {
-max-width: 340px;;
+max-width: 340px;
+
 position: absolute;
 top: 40%;
 left: 40%;
