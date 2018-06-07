@@ -24,6 +24,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             padding: 160px 20px;
+            padding-top: 240px;
             color: #fff;
             height: 100%;
         }
@@ -50,18 +51,76 @@
         }
         .logo {
             color: #FFF;
+            text-align: center;x
         }
+        .logo img {
+            width: 120px;
+            margin-bottom: 40px;
+        }
+
         .menu {
-            float: right;
+            display: block;
+            text-align: center;
         }
         .menu a {
             display: inline-block;
             padding: 24px 0;
             color: white;
             text-transform: uppercase;
-            margin-left: 20px;
+            margin: 0 10px;
             font-size: 0.9rem;
         }
+
+        @media (min-width: 500px) {
+            .menu a {
+                color: green;
+            }
+        }
+
+        @media screen and (min-width: 600px) {
+            .menu a {
+                color: blue;
+            }
+
+            .logo-mobile img {
+                display: none;
+            }
+            .logo img {
+                display: block;
+            }
+        }
+
+        @media screen and (min-width: 700px) {
+            .menu a {
+                color: red;
+            }
+        }
+
+        @media screen and (min-width: 900px) {
+            .logo img {
+                width: 160px;
+            }
+            .logo {
+                float: left;
+                margin-bottom: 0;
+            }
+            .menu {
+                text-align: right;
+            }
+            .menu a {
+                display: inline-block;
+                padding: 24px 0;
+                color: white;
+                text-transform: uppercase;
+                margin-left: 20px;
+                font-size: 0.9rem;
+            }
+            .welcome-container {
+                padding-top: 160px;
+            }
+        }
+
+
         .btn-custom.btn-green {
                 background-color: #28be56;
                 border-color: #28be56;
@@ -114,6 +173,11 @@
 
     <header>
         <div class="content">
+            <div class="logo">
+                <a href="/">
+                    <img src="imgs/logo_001.png" alt="">
+                </a>
+            </div>
             <div class="menu">
                 <a href="#">Products</a>
                 <a href="#">Prices</a>
@@ -121,11 +185,6 @@
                 <a href="#">Team</a>
                 <a href="#">Login</a>
                 <a href="#">Sign Up</a>
-            </div>
-            <div class="logo">
-                <a href="/">
-                    <img src="imgs/logo_001.png" width="160" alt="">
-                </a>
             </div>
         </div>
     </header>
