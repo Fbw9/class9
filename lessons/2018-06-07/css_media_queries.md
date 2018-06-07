@@ -6,8 +6,10 @@ specific characteristics and parameters (such as screen resolution or
 browser viewport width).
 
 ```
-@media screen and (min-width: 900px) and (orientation: landscape) {
-    font-size: 30px;
+@media screen and (min-width: 900px) {
+    body {
+        font-size: 30px;
+    }
 }
 ```
 
