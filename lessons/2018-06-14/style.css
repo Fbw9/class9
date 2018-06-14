@@ -1,0 +1,83 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    display: block;
+    max-width: 1000px;
+}
+
+/**
+    Pure css close icon
+*/
+.close-icon {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 16px;
+    height: 16px;
+    opacity: 0.4;
+    cursor: pointer;
+}
+.close-icon:hover {
+    opacity: 1;
+}
+.close-icon:before, .close-icon:after {
+    position: absolute;
+    left: 4px;
+    content: ' ';
+    height: 17px;
+    width: 2px;
+    background-color: #fff;
+}
+.close-icon:before {
+    transform: rotate(45deg);
+}
+.close-icon:after {
+    transform: rotate(-45deg);
+}
+
+/**
+    Cookies notice
+*/
+.cookie-container {
+    position: relative;
+}
+.cookie {
+    background-color: #222;
+    padding: 14px;
+    color: #777;
+    font-size: 12px;
+}
+.cookie p {
+    margin: auto;
+}
+.cookie p  a {
+    color: #777;
+    text-decoration: underline;
+}
+.cookie-container label {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 14px;
+
+}
+.cookie-container input:checked ~ .cookie {
+    display: none;
+}
+.cookie-container input:checked ~ label {
+    display: none;
+}
+#cookie-close-checkbox {
+    display: none;
+}
