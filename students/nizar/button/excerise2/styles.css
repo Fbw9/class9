@@ -1,0 +1,48 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+font-family: cursive;
+}
+ h1 {
+   color: blue;
+ }
+
+div {
+  display: inline;
+  margin: 10px;
+  padding: 30px;
+  border: 1px solid red;
+  height: 40px;
+  max-width: 40px;
+}
+
+button {
+  background-color: #0069d9;
+  padding: 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+button .Default {
+  color: #007bff;
+
+}
+
+.Hover:hover {
+  border: 1px solid red;
+  border-radius: 0;
+  color: #043d99;
+}
+
+.Active:active {
+  border: 1px solid red;
+  border-radius: 15;
+  color: #001330;
+  margin: 0;
+}
+
+.Focus:focus {
+  border: 1px solid red;
+  border-radius: 8px;
+}

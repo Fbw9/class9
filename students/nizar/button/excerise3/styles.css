@@ -1,0 +1,46 @@
+html, body {
+  margin: 10px;
+  padding: 0;
+  font-size: 14px;
+  font-family: cursive;
+}
+ h1 {
+   color: blue;
+ }
+.tables {
+  display: inline-block;
+  margin: 15px;
+}
+tr, td, th {
+  padding: 10px;
+}
+
+/*================Table 1=================*/
+.table1 td {
+  border-left: 4px solid darkgrey;
+}
+.table1 tr:nth-child(odd) td:first-child{
+    border-left: 4px solid #cc181b;
+}
+
+.table1 tr:nth-child(even) td:first-child{
+    border-left: 4px solid #449d45;
+}
+
+/*================Table 2=================*/
+
+.table2 {
+  background: #888888;
+}
+
+.table2 tr:nth-child(odd){
+  background: #c0c0c0;
+}
+
+.table2 tr:nth-child(even){
+  background: #efefef;
+}
+
+.table2 tr:nth-child(3n+4) td:nth-child(2){
+  background: #ffbbbb;
+}

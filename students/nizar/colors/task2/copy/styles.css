@@ -17,7 +17,7 @@ header {
 header div {
   max-width: 600px;
   color: #444;
-  margin: 0 auto;
+  margin: auto;
 
 }
 
@@ -51,6 +51,7 @@ footer div {
   color: #FFF;
   font-weight: bold;
 }
+
 footer div p {
   display: inline-block;
 }
