@@ -26,9 +26,13 @@ ul {
 h2 {
   color: #cb0037;
 }
+
+p {
+  color: #333;
+}
 /*==========Global==========*/
 .global {
-  height: 100%;
+  
   max-width: 1200px;
   margin: auto;
   position: relative;
@@ -37,8 +41,6 @@ h2 {
 /*==========HEADER==========*/
 .header {
   background: url('images/background.png');  
-  background-color: #cb0037;
-  position: relative;
   background-position: center;
   background-size: cover;
   height: 100%;
@@ -97,6 +99,7 @@ h2 {
   margin: 20px;
   letter-spacing: 2px;
   position: relative;
+  color: #fff;
 }
 
 
@@ -241,7 +244,7 @@ background-color: #fff;
 
 
 /*Nature Block 1
-====================================*/
+====================================
 .nature-container2 {
   clear: both;
 }
@@ -252,4 +255,171 @@ background-color: #fff;
 .nature-container1 img {
   width: 50%;
   float: left;
+}*/
+
+
+/************First Block****************/
+body {
+  margin: 0;
+}
+
+.global1 {
+  height: 500px;
+}
+
+.img1 {
+  width: 50%;
+  height: 100%;
+  background: url('images/foto-top.png') no-repeat;
+  background-size: cover;
+}
+
+.moved1 {
+  width: 50%;
+  transform: translate(110%, -180%);
+}
+
+.moved1 h2, p {
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .moved1  {
+    transform: translate(110%, -155%);
+  }
+}
+
+.btn-blue-container1 {
+  margin-top: 50px;
+}
+.button-blue-1 {
+  border: 1px solid #264699;
+  background-color: #264699;
+  color: #fff;
+  border-radius: 25px;
+  width: 200px;
+  height: 50px;
+  font-size: 1rem;
+  margin-top: 30px;
+}
+
+.btn3_1:hover {
+  color: #fff;
+  background-color: #cb0037;
+  border: 1px solid #cb0037;
+  }
+
+@media (max-width: 600px) {
+  .button-blue-1  {
+    border: 1px solid #264699;
+    background-color: #264699;
+    color: #fff;
+    border-radius: 25px;
+    width: 150px;
+    height: 35px;
+    font-size: 0.7rem;
+    margin-top: 5px;
+  }
+}
+
+
+/************Second Block****************/
+.global2 {
+  height: 500px;
+  transform: scaleX(-1);
+}
+
+.img2 {
+  width: 50%;
+  height: 100%;
+  background: url('images/foto-bottom.png') no-repeat;
+  background-size: cover;
+  transform: scaleX(-1);
+ 
+}
+
+.moved2 {
+  width: 50%;
+  transform: translate(70%, -185%);
+}
+
+
+.text {
+  transform: scaleX(-1);
+}
+
+
+@media (max-width: 580px) {
+  .moved2  {
+    transform: translate(110%, -155%);
+  }
+}
+
+
+.button-blue-2 {
+  border: 1px solid #264699;
+  background-color: #264699;
+  color: #fff;
+  border-radius: 25px;
+  width: 200px;
+  height: 50px;
+  font-size: 1rem;
+  margin-top: 30px;
+
+}
+
+.btn3_2:hover {
+  color: #fff;
+  background-color: #cb0037;
+  border: 1px solid #cb0037;
+  }
+
+@media (max-width: 580px) {
+  .button-blue-2  {
+    border: 1px solid #264699;
+    background-color: #264699;
+    color: #fff;
+    border-radius: 25px;
+    width: 150px;
+    height: 35px;
+    font-size: 0.7rem;
+    margin-top: 5px;
+  }
+}
+
+/************Newsletter  Block****************/
+.newsletter {
+  padding-top:200px;
+  padding-bottom: 200px;
+  text-align: center;
+  width: 100%;
+  background: url('images/bg-small.png') no-repeat;
+  background-size: cover;
+}
+
+
+.newsletter input {
+  border: 1px solid #fff;
+  border-radius: 25px 25px;
+  padding: 10px;
+}
+
+.newsletter button {
+  border: 1px solid #fff;
+  border-radius: 25px 25px;
+  width: 100px;
+  margin-left: -50px;
+  padding: 10px;
+}
+
+
+
+/************Map  Block****************/
+.map {
+  padding-top:200px;
+  padding-bottom: 200px;
+  text-align: center;
+  width: 100%;
+  background: url('images/map.png') no-repeat;
+  background-size: contain;
 }

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,700');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+}
+
+body, html {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 16px;
+}
+
+/************Background****************/
+
+body {
+  
+  background: url('imgs/bg.jpg') no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.global {
+  max-width: 1200px;
+  margin: 5% auto;
+  position: relative;
+}
+/************Logo****************/
+.global img {
+  width: 200px;
+}
+
+/************Navigation****************/
+.global ul {
+  float: right;
+  margin-top: 2%;
+  text-align: center;
+}
+
+.global li {
+  display: inline-block;
+  margin: 10px 5px;
+  font-size: 1rem;
+}
+
+.global li a {
+  color: white;
+  padding: 5px;
+  letter-spacing: 1px;
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+
+.global li a:hover {
+  border: 1px solid white;
+  border-radius: 25px;
+}
+
+/************Content****************/
+.content {
+  color: #fff;
+  margin: 100px 0 30px 0;
+  width: 400px;
+  letter-spacing: 1px;
+  line-height: 31px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+/************Buttons****************/
+
+button {
+  padding: 10px;
+  width:130px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.green {
+  margin-right: 10px;
+  background-color: green;
+}
+
+.green:hover{
+  background-color: rgb(97, 226, 97);
+}
+
+.blue {
+  background-color: blue;
+}
+
+.blue:hover {
+  background-color: rgb(41, 212, 255);
+}
+
+/************Phones img****************/
+
+.phones {
+  width: 20%;
+  position: relative;
+  margin-left: 50%;
+  margin-top: -450px;
+}
+.white {
+  width: 300px;
+  min-width: 150;
+  position: absolute;
+  top: -25px;
+  left: 35%;
+  z-index: -1;
+}
+.black {
+  
+  width: 300px;
+  min-width: 150;
+ 
+}
