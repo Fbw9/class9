@@ -11,3 +11,5 @@
             <a href="#" class="nav-item nav-link">More info</a>
         </div>
     </div>
+</nav>
+
