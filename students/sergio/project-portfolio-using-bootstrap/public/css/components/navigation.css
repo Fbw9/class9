@@ -1,0 +1,84 @@
+.navbar{
+    padding: 0;
+    
+}
+
+
+.bg-dark{
+    background-color: blue !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+}
+
+.text-white{
+    padding: 1rem 2rem 1rem 3rem;
+}
+
+.navbar-dark .navbar-toggler{
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 2.25rem !important;
+    line-height: 1 !important;
+    border: 1px solid transparent !important;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url(../../images/if_menu-alt_134216.svg);
+}
+
+.navbar-dark .navbar-toggler-icon-close {
+    background-image: url(../../images/600a68c9-96c6-444c-93ba-b3a4d7f6a06c.svg);
+}
+
+.menu{
+    display: flex;
+    max-width: 40vw;
+    flex-wrap: wrap;
+}
+
+.text-muted-wrapper{
+    padding: 1rem;
+    max-width: 20vw;
+}
+
+.text-muted{
+    color: #ffffff !important;
+    position: relative;
+    top: 3.5rem;
+    left: -2rem;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+svg{
+    margin-left: 47vw;
+    bottom: 9rem;
+    position: relative;
+}
+
+#scroll-arrow-bottom{
+    bottom: -26rem;
+    transform: rotateZ(180deg);
+}
+
+@media screen and (max-width: 720px){
+    svg{
+        margin-left: 40vw;
+        transform: scale(0.7);
+    }
+    .navbar-toggler{
+        transform: scale(0.8);
+        right: 1rem !important;
+        
+    }
+}
+
+
+

@@ -1,0 +1,49 @@
+.intro{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poiret One', cursive;
+}
+
+.intro-text{
+    margin: 10rem 3rem 0rem 4rem !important;
+    z-index: 1100 !important;
+    max-width: 40vw;
+}
+
+.intro-img{
+    width: 50vw;
+    height: 88vh;
+    transform: skewY(35deg);
+    background-color: blue;
+}
+
+@media screen and (max-width: 1400px){
+    .intro-text{
+        font-size: 3.7rem;
+    }
+    .intro-img{
+        height: 77vh
+        
+    }
+    
+}
+
+@media screen and (max-width: 1120px){
+    .intro-text{
+        max-width: 100vw;
+    }
+    .intro-img{
+        width: 100vw;
+        background: linear-gradient(-216deg, white 23%, blue 23.1%);
+    }
+}
+
+@media screen and (max-width: 720px){
+    .intro-text{
+        text-align: center;
+        margin: 5rem 1.5rem 0rem 2rem !important;
+        font-size: 8.6vw;
+    }
+    
+}
+

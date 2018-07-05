@@ -1,0 +1,9 @@
+/********fonts*********/
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+
+@import url("components/intro.css");
+@import url("components/layout.css");
+@import url("components/navigation.css");
+@import url("components/bottom.css");
+@import url("components/cards.css");
