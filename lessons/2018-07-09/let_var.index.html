@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript</title>
+</head>
+<body>
+  Input your number: <input type="text" id="max" value="5"><br>
+  <button onclick="test()">ok</button>
+
+  <script>
+  function test() {
+    var max = document.getElementById('max').value * 1;
+    var winningNumber = 3;
+    var i = 3;
+
+    for (let i = 0; i < 100; i++) {
+      if (i == max) {
+        break;
+      }
+      console.log('test', i, max);
+    }
+
+    if (winningNumber === i) {
+      alert('you win!');
+    }
+
+    console.log('my count element', i, winningNumber, max);
+    }
+  </script>
+
+</body>
+</html>
