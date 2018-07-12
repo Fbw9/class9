@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object and Arrays</title>
+</head>
+<body>
+
+<script>
+let street = 'some street';
+
+let numbers = [
+  1, 2, 3, 4, 5
+];
+
+let object = {
+  street: null,
+  nr: '9',
+  code: 10623,
+  city: 'Berlin',
+};
+
+console.log('numbers', typeof numbers, numbers)
+console.log('object', typeof object, object)
+
+console.log()
+
+
+
+let array = [
+  1, 2, 3, 4, 5, true, 'String', object, numbers
+];
+
+console.log(array);
+
+
+
+console.log('type of array:', typeof array);
+console.log('type of object:', typeof object);
+
+
+console.log('before', object);
+address.street = 'Changedstr.';
+console.log('after', object);
+console.log('street', street);
+
+</script>
+
+</body>
+</html>
