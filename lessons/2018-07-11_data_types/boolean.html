@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Boolean</title>
+</head>
+<body>
+
+  <button onclick="clickOnButton()">Click me!</button>
+  <button onclick="check()">Check, is button clicked or not</button>
+
+<script>
+
+  let buttonClicked = false;
+
+  function clickOnButton() {
+    console.log('value before click', buttonClicked);
+    buttonClicked = true;
+    console.log('value after click', buttonClicked);
+  }
+
+  function check() {
+    console.log(buttonClicked);
+    if (buttonClicked) {
+      alert('Yes, clicked!');
+    } else {
+      alert('Not clicked!');
+    }
+  }
+
+</script>
+
+</body>
+</html>
