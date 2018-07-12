@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Loops</title>
+</head>
+<body>
+
+<script>
+
+let myObject = {
+  first_name: 'John',
+  last_name: 'Doe',
+  age: 25,
+};
+
+let myArray = [
+  'Nizar', // index - 0
+  'Anna', // index - 1
+  'Roman',
+  'Andrea',
+];
+
+myArray[1000000] = 'Bad';
+
+// "for in" loop
+for (let property_name in myObject) {
+  console.log(property_name, myObject[property_name]);
+};
+
+console.log('array length:', myArray.length);
+for (let i in myArray) {
+  console.log(i, myArray[i]);
+};
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
