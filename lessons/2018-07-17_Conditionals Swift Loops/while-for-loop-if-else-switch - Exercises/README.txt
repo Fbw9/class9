@@ -1,3 +1,3 @@
-A Pen created at CodePen.io. You can find this one at https://codepen.io/rkretch91/pen/OwNKRr.
+Some practice of conditionals, switch statements, loops, and some combinations
 
  
