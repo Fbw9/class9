@@ -8,6 +8,11 @@
             display: flex;
             flex-direction: column;
         }
+        #orderOutput{
+            padding-top: 2rem;
+            font-size: 2rem;
+            color: blue;
+        }
     </style>
 </head>
 
@@ -20,7 +25,10 @@
 
         </div>
     </div>
-    <input type="button" id="myButton" onclick = "order()" value="Order Delivery!">
+    <input type="button" id="myButton" onclick="order()" value="Order Delivery!">
+    <div id="orderOutput">
+
+    </div>
 
     <script>
         /* The Restaurant App
@@ -61,6 +69,7 @@
         */
 
         let output = document.querySelector('#restaurantOutput');
+        let orderOutput = document.querySelector('#orderOutput');
 
         let restaurantOrient = {
             name: 'Oases',
@@ -68,7 +77,7 @@
             closes: 10,
             entrees: [' Falafel', ' Hummus', ' Pizza', ' Schwarma in Wrap'],
             delivery: function () {
-                if (this.open > 2 && this.closes < 10) {
+                if ((this.open > 2) && (this.closes < 10)) {
                     // console.log("Delivery on its way!")
                     return "Delivery on its way!";
                 }
@@ -80,8 +89,9 @@
             }
         }
 
-        function order(){
+        function order() {
             console.log(restaurantOrient.delivery());
+            orderOutput.innerHTML = restaurantOrient.delivery();
         }
 
         output.innerHTML = `<h3>Name:${restaurantOrient.name}</h3>
