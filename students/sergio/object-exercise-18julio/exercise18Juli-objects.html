@@ -96,6 +96,7 @@
 
         let timeNow = new Date();
         let hours = timeNow.getHours();
+
         // let hours = 23 // to check if its work!
         console.log(hours);
 
@@ -123,7 +124,7 @@
             name: 'Torero',
             opens: 9,
             currentime: hours,
-            closes: 23,
+            closes: 10,
             entrees: [' Paella', ' Cochinillo', ' Asado', ' Tortilla'],
             delivery: function () {
                 if ((this.currentime > this.opens) && (this.currentime < this.closes)) {
@@ -138,11 +139,17 @@
             }
         }
 
-        function order() {
-            console.log(restaurantOrient.delivery());
+        function order(id) {
+            console.log(id);
             orderOutput.style.padding = "3rem";
-            orderOutput.innerHTML = restaurantOrient.delivery();
-            orderOutput.innerHTML = restaurantSpain.delivery();
+
+            if(id =="oases"){
+            orderOutput.innerHTML = restaurantOrient.delivery(id);
+            }
+            if(id =="torero"){
+            orderOutput.innerHTML = restaurantSpain.delivery(id);
+            }
+
         }
 
         output.innerHTML = `<h3>Name:${restaurantOrient.name}</h3>
@@ -151,7 +158,7 @@
             <li>close at: ${restaurantOrient.closes}pm,</li>
             <li>entrees: ${restaurantOrient.entrees}</li>
             </ul>
-            <input type="button" id="myButton" onclick="order()" value="Order Delivery!">
+            <input type="button" class="myButton" id ="oases" onclick="order(id)" value="Order Delivery!">
             
             <h3>Name:${restaurantSpain.name}</h3>
             <img src=${restaurantSpain.image} style="width: 300px">
@@ -159,9 +166,26 @@
             <li>close at: ${restaurantSpain.closes}pm,</li>
             <li>entrees: ${restaurantSpain.entrees}</li>
             </ul>
-            <input type="button" id="myButton" onclick="order()" value="Order Delivery!">`
+            <input type="button" class="myButton" id ="torero" onclick="order(id)" value="Order Delivery!">`
 
 
+
+        ///lets use each input separately
+
+        let inputsArray = [];
+        let orderInputs = document.getElementsByTagName('input');
+            console.log(orderInputs);
+
+        for (let i = 0; i < orderInputs.length; i++) {
+            console.log(orderInputs[i]);
+            }
+        
+        
+        // inputsArray.push(orderInput);
+
+        // for (let i = 0; i < inputsArray.length; i++) {
+        //     }
+        // };
 
 
         ///books list/////
@@ -200,7 +224,7 @@
         }
 
 
-//////////other way to do that ////////////////////////////////
+        //////////other way to do that ////////////////////////////////
 
         books.forEach(function (book) {
 
