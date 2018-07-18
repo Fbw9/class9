@@ -93,11 +93,17 @@
         let output = document.querySelector('#restaurantOutput');
         let orderOutput = document.querySelector('#orderOutput');
 
+        let timeNow = new Date();
+        let hours = timeNow.getHours();
+        // let hours = 23 // to check if its work!
+        console.log(hours);
+
         let restaurantOrient = {
+            image: "images/image.jpg",
             name: 'Oases',
-            opens: 2,
-            currentime: 7,
-            closes: 10,
+            opens: 10,
+            currentime: hours,
+            closes: 22,
             entrees: [' Falafel', ' Hummus', ' Pizza', ' Schwarma in Wrap'],
             delivery: function () {
                 if ((this.currentime > this.opens) && (this.currentime < this.closes)) {
@@ -119,7 +125,8 @@
         }
 
         output.innerHTML = `<h3>Name:${restaurantOrient.name}</h3>
-            <ul><li>Opens at: ${restaurantOrient.opens}pm,</li>
+            <img src=${restaurantOrient.image} style="width: 300px">
+            <ul style="padding: 2rem; width: 270px;"><li>Opens at: ${restaurantOrient.opens}pm,</li>
             <li>close at: ${restaurantOrient.closes}pm,</li>
             <li>entrees: ${restaurantOrient.entrees}</li>
             </ul>`
