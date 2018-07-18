@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Loops</title>
+</head>
+<body>
+
+<script>
+// array contains a list of values
+let myClass = [
+  'Nizar', // index - 0
+  'Anna', // index - 1
+  'Roman',
+  'Andrea',
+];
+
+console.log('Students total:', myClass.length);
+console.log(myClass[0]);
+var i = 0;
+console.log(myClass[i]);
+
+// loop for
+// for (statement 1; statement 2; statement 3;)
+// statement 1 runs before the loop starts
+// statement 2 is a condition to limit the loop
+// statement 3 is for increasing/decreasing the value of i
+function getMyClassLength() {
+  return myClass.length;
+}
+console.log(getMyClassLength());
+
+for (let i = 0; i < getMyClassLength(); i++) {
+  console.log(i, myClass[i]);
+  if (i > 1000) {
+    // "emergency exit"
+    break;
+  }
+};
+
+console.log(i);
+console.log(myClass[0]);
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Switch</title>
+</head>
+<body>
+
+  <form>
+    Please chose your book:<br>
+    <select id="chosenBook" onchange="checkBook()">
+      <option value="null">Please make your choice:</option>
+      <option value="0">DCI Guided Tour</option>
+      <option value="1">JavaScript for Beginners</option>
+      <option value="2">C++</option>
+      <option value="3">Python</option>
+    </select>
+  </form>
+
+<script>
+let books = [
+  'DCI Guided Tour', // 0
+  'JavaScript for Beginners', // 1
+  'C++', // 2
+  'Python', // 3
+];
+
+function checkBook() {
+  let selectElement = document.querySelector('#chosenBook');
+  // convert string value to the number (integer)
+  let chosenBookIndex = parseInt(selectElement.value);
+  let test = 1;
+
+  function makeZero() {
+    return 0;
+  }
+
+  switch (chosenBookIndex) {
+    case makeZero():
+      showResult('Your choice: ' + books[chosenBookIndex]);
+    break;
+    case test:
+      showResult('Great! Best choice: ' + books[chosenBookIndex]);
+    break;
+    case 2:
+      showResult('A little bit to much!!!' + books[chosenBookIndex]);
+    break;
+    case 3:
+      showResult(books[chosenBookIndex] + '. Why?');
+    break;
+    default: // optional
+      showResult('Nothing selected');
+  }
+
+}
+
+function showResult(string) {
+  alert(string);
+}
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

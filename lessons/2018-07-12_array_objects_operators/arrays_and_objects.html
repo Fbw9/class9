@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Arrays and Object</title>
+</head>
+<body>
+
+<script>
+// arrays and objects are collections
+
+// objects have named properties
+let person = {
+  // e.g. 'fisrt_name' - object property
+  first_name: 'John',
+  last_name: 'Doe',
+};
+
+// access object properties by name
+console.log(person.first_name);
+console.log(person['first_name']);
+
+// array contains a list of values
+// array does not have named properties
+// access array elements only by index
+// index starts by 0
+let myClassArray = [
+  'Nizar', // index - 0
+  'Anna', // index - 1
+];
+
+console.log(myClassArray[0]);
+
+// create an empty array
+let myClassArrayAgain = new Array();
+console.log(myClassArrayAgain);
+
+// add array element by index
+myClassArrayAgain[0] = 'Nizar';
+myClassArrayAgain[1] = 'Anna';
+
+myClassArrayAgain.push('Roman');
+myClassArrayAgain.push('Andrea');
+
+console.log(myClassArrayAgain.length, myClassArrayAgain);
+
+// link: array methods
+// https://javascript.info/array-methods
+// https://javascript.info/object-methods
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Null</title>
+</head>
+<body>
+
+  <input type="text" id="name">
+  <button onclick="assignName()">Assign name</button>
+  <button onclick="submitForm()">Submit form</button>
+
+<script>
+  let username = null;
+  
+  function submitForm() {
+    if (username === null) {
+      alert('Please, assign your name!');
+      return;
+    }
+
+    console.log('username', username);
+
+    if (username == 'tester') {
+      console.log('Hi tester!');
+    }
+  }
+
+  function assignName() {
+    username = document.getElementById('name').value;
+    console.log('assigned username', username);
+  }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Operators</title>
+</head>
+<body>
+
+  <input id="demo" value="0">
+
+<script>
+
+// https://www.w3schools.com/js/js_operators.asp
+
+// The assignment operator (=) assigns a value to a variable
+var x = document.querySelector('#demo').value;
+let myArray = [
+  'Herr',
+  'John',
+  'Doe',
+];
+x = '1'; // string
+let country = 'de';
+
+if (x === 1 && country === 'de') {
+  x = x + 1;
+  let y = x * 5;
+  console.log('Sehr geehrter Herr', myArray[x], x, y);
+} else {
+  console.log('Hi ' + myArray[x]);
+}
+
+console.log(x, typeof x);
+x = parseInt(x) + 5;
+console.log(x, typeof x);
+
+// ternary operator
+let foo = '';
+let bar = 4;
+
+if (bar === 4) {
+  foo = 'ok';
+} else {
+  foo = 'not ok';
+}
+
+console.log(bar, foo);
+
+// we can do the same with:
+foo = '';
+foo = (bar === 4 ? 'ok' : 'not ok');
+console.log(bar, foo);
+
+// logical Operators
+let buttonClicked = false;
+let formSubmitted = false;
+
+// logical not
+
+// next 3 are the same
+if (buttonClicked === false) {
+  console.log('not clicked');
+}
+if (buttonClicked !== true) {
+  console.log('not clicked');
+}
+if (!buttonClicked) {
+  console.log('not clicked');
+}
+
+// next 3 are the same
+if (buttonClicked !== false) {
+  console.log('clicked');
+}
+if (buttonClicked === true) {
+  console.log('clicked');
+}
+if (buttonClicked) {
+  console.log('clicked');
+}
+
+// logical and operator
+
+// next 2 statements are the same
+if (buttonClicked === true && formSubmitted === true) {
+  console.log('done');
+}
+if (buttonClicked === true) {
+  if (formSubmitted === true) {
+    console.log('done');
+  }
+}
+
+// logical 'or' operator
+
+if (buttonClicked === true || formSubmitted === true) {
+  console.log('something is clicked');
+}
+if (buttonClicked === true) {
+  console.log('something is clicked');
+} else if (formSubmitted === true) {
+  console.log('something is clicked');
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

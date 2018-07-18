@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String</title>
+</head>
+<body>
+
+<script>
+  let name = null;
+  let first_name = 'Johnny'; // string
+  let last_name = 'English'; // string
+  let age = 23; // number
+  let year = '2018'; // string
+  let year_again = "2018"; // string
+  let space_string = ' ';
+  let empty_string = '';
+
+  function changeFirstName() {
+    first_name = 'Changed';
+  }
+
+  function getFullName() {
+    let result = first_name + ' ' + last_name;
+
+    if (first_name === 'Changed') {
+      return 'very bad';
+    }
+
+    return result;
+  }
+
+  changeFirstName();
+
+  console.log('before', first_name);
+  name =  getFullName() + ' and his age is ' + age;
+  console.log('after', first_name);
+
+
+  if (space_string === empty_string) {
+    console.log('ok');
+  }
+
+  console.log('full name:', name);
+  console.log('Type of name:', typeof name);
+
+
+
+</script>
+
+</body>
+</html>
