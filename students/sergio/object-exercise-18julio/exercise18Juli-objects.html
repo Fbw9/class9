@@ -96,10 +96,11 @@
         let restaurantOrient = {
             name: 'Oases',
             opens: 2,
+            currentime: 7,
             closes: 10,
             entrees: [' Falafel', ' Hummus', ' Pizza', ' Schwarma in Wrap'],
             delivery: function () {
-                if ((this.open > 2) && (this.closes < 10)) {
+                if ((this.currentime > this.opens) && (this.currentime < this.closes)) {
                     // console.log("Delivery on its way!")
                     return "Delivery on its way!";
                 }
