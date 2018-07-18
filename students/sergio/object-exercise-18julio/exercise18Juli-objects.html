@@ -4,14 +4,36 @@
 <head>
     <title>Object Practice</title>
     <style>
+        #wrapper{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         #restaurantOutput {
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
-        #orderOutput{
+
+        h3 {
             padding-top: 2rem;
             font-size: 2rem;
             color: blue;
+        }
+
+        #orderOutput {
+            padding-top: 2rem;
+            font-size: 2rem;
+            color: blue;
+        }
+
+        input {
+            border-style: none;
+            width: 300px;
+            height: 60px;
+            color: white;
+            background-color: blue;
         }
     </style>
 </head>
@@ -24,10 +46,10 @@
         <div id="restaurantOutput">
 
         </div>
-    </div>
-    <input type="button" id="myButton" onclick="order()" value="Order Delivery!">
-    <div id="orderOutput">
+        <input type="button" id="myButton" onclick="order()" value="Order Delivery!">
+        <div id="orderOutput">
 
+        </div>
     </div>
 
     <script>
@@ -91,6 +113,7 @@
 
         function order() {
             console.log(restaurantOrient.delivery());
+            orderOutput.style.padding = "3rem";
             orderOutput.innerHTML = restaurantOrient.delivery();
         }
 
