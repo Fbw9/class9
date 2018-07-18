@@ -4,12 +4,13 @@
 <head>
     <title>Object Practice</title>
     <style>
-        #wrapper{
+        #wrapper {
 
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+
         #restaurantOutput {
             display: flex;
             flex-direction: column;
@@ -40,17 +41,17 @@
 
 
 <body>
+    <div id="orderOutput" style="position:fixed; width: 300px; height: 70px; top: 2rem; right: 1rem;"></div>
 
     <div id="wrapper">
         <h3>Restaurant</h3>
         <div id="restaurantOutput">
 
         </div>
-        <input type="button" id="myButton" onclick="order()" value="Order Delivery!">
-        <div id="orderOutput">
 
-        </div>
+        <div id="orderOutput"></div>
     </div>
+
 
     <script>
         /* The Restaurant App
@@ -117,11 +118,31 @@
 
             }
         }
+        let restaurantSpain = {
+            image: "images/image1.JPG",
+            name: 'Torero',
+            opens: 9,
+            currentime: hours,
+            closes: 23,
+            entrees: [' Paella', ' Cochinillo', ' Asado', ' Tortilla'],
+            delivery: function () {
+                if ((this.currentime > this.opens) && (this.currentime < this.closes)) {
+                    // console.log("Delivery on its way!")
+                    return "Delivery on its way!";
+                }
+                else {
+                    // console.log("Delivery not available at this time - Go to sleep")
+                    return "Delivery not available at this time - Go to sleep";
+                }
+
+            }
+        }
 
         function order() {
             console.log(restaurantOrient.delivery());
             orderOutput.style.padding = "3rem";
             orderOutput.innerHTML = restaurantOrient.delivery();
+            orderOutput.innerHTML = restaurantSpain.delivery();
         }
 
         output.innerHTML = `<h3>Name:${restaurantOrient.name}</h3>
@@ -129,7 +150,16 @@
             <ul style="padding: 2rem; width: 270px;"><li>Opens at: ${restaurantOrient.opens}pm,</li>
             <li>close at: ${restaurantOrient.closes}pm,</li>
             <li>entrees: ${restaurantOrient.entrees}</li>
-            </ul>`
+            </ul>
+            <input type="button" id="myButton" onclick="order()" value="Order Delivery!">
+            
+            <h3>Name:${restaurantSpain.name}</h3>
+            <img src=${restaurantSpain.image} style="width: 300px">
+            <ul style="padding: 2rem; width: 270px;"><li>Opens at: ${restaurantSpain.opens}pm,</li>
+            <li>close at: ${restaurantSpain.closes}pm,</li>
+            <li>entrees: ${restaurantSpain.entrees}</li>
+            </ul>
+            <input type="button" id="myButton" onclick="order()" value="Order Delivery!">`
 
 
 
@@ -160,6 +190,17 @@
 
         ]
 
+        for (let book of books) {
+            if (book.alreadyRead == true) {
+                console.log(`You already read ${book.title}`);
+            } else {
+
+                console.log(`You still need to read ${book.title}`);
+            }
+        }
+
+
+//////////other way to do that ////////////////////////////////
 
         books.forEach(function (book) {
 
