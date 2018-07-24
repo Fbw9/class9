@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team Builder</title>
+    <style>
+        body {
+            padding: 40px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script>
+        let students = [
+            'Andrea',
+            'Ansumana',
+            'Anna',
+            'Azadeh',
+            'Daniel',
+            'Fabrizio',
+            'Fahd',
+            'Gabriela',
+            'Gaia',
+            'Hadi',
+            'Jannis',
+            'Mohammed',
+            'Nima',
+            'Nizar',
+            'Philipp',
+            'Sebastian',
+            'Sergio',
+            'Viktor',
+        ];
+        let teams = [];
+
+        function getRandomNumber(max) {
+            let min = 0;
+
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function buildTeam(names, teamSize) {
+            let team = [];
+
+            while(names.length > 0 && team.length < teamSize) {
+                let randomNameIndex = getRandomNumber(names.length - 1);
+
+                team.push(names[randomNameIndex]);
+                names.splice(randomNameIndex, 1);
+            }
+
+            teams.push(team);
+
+            return names;
+        }
+
+        function listTeams() {
+            let list = '';
+
+            for (let i = 0; i < teams.length; i++) {
+                list += '<strong>Team ' + (i + 1) + ':</strong><ul>';
+
+                for (let x = 0; x < teams[i].length; x++) {
+                    list += '<li>' + teams[i][x] + '</li>';
+                }
+
+                list += '</ul><br>';
+            }
+
+            document.querySelector('#teams').innerHTML = list;
+        }
+
+        function generateTeams() {
+            let unassignedStudents = students.slice(0);
+            let teamSize = parseInt(document.querySelector('#team-size').value);
+
+            teams = [];
+            while(unassignedStudents.length > 0) {
+                unassignedStudents = buildTeam(unassignedStudents, teamSize);
+            }
+
+            listTeams();
+        }
+    </script>
+</head>
+<body>
+    
+    Max. team size:
+    <input type="text" id="team-size" value="3">
+    <button onClick="generateTeams()">Generate random teams</button>
+    <hr>
+    <table>
+        <tr>
+            <td valign="top" style="padding-right: 60px;">
+                <strong>Students:</strong>
+                <ul>
+                    <script>
+                        for (let i = 0; i < students.length; i++) {
+                            document.write('<li>' + students[i] + '</li>');
+                        }
+                    </script>
+                </li>
+            </td>
+            <td>
+                <div id="teams"></div>
+            </td>
+        </tr>
+    </table>
+
+</dody>
+</html>
