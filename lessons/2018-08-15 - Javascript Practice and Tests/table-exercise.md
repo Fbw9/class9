@@ -15,7 +15,7 @@ __You have to create:__
 
 Your result could look like the following demo, that shows all needed parts of the application. Feel free to add some more creative styling, but please get it working first.  
 
-![Demo Result](./array-loops-demo.jpg)
+![Demo Result](https://github.com/rkretch91/js-exercises/blob/master/exercises/array-loops/array-loops-demo.jpg?raw=true)
 
 ## Template
 
