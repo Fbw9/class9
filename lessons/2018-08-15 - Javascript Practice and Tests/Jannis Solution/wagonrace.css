@@ -1,0 +1,36 @@
+#raceway{
+	width:80%;
+	margin:auto;
+	border-collapse: collapse;
+}
+#raceway td{
+		border:2px dotted black;
+		width:10%;
+}
+#raceway tr td:last-of-type{
+	background-image: url("finish.png");
+}
+#red{
+	width:90%;
+	margin:auto;
+	display:block;
+}
+#yellow{
+	width:90%;
+	margin:auto;
+	display:block;
+}
+#keys{
+	display:flex;
+	justify-content: space-around;
+}
+#keys div{
+	font-size: 100px;
+	font-weight: bold;
+}
+#keys div:nth-of-type(1){
+	color:red;
+}
+#keys div:nth-of-type(2){
+	color:blue;
+}
