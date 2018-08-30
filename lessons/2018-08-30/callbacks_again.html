@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Callbacks</title>
+    <style>
+        body {
+            padding: 40px;
+            font-size: 14px;
+            font-family: Arial;
+        }
+
+        .post,
+        .user,
+        .comment {
+            margin-bottom: 20px;
+        }
+
+        .comment div {
+            font-size: 0.8rem;
+        }
+
+        .title,
+        .name {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table border="1">
+        <tr>
+            <td>
+                <h3>Posts</h3>
+                <div id="posts"></div>
+            </td>
+            <td valign="top">
+                <h3>Users</h3>
+                <div id="users"></div>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+    /*
+
+
+        function drawPosts(posts) {
+            let content = '';
+            let title, body, id;
+            for (let i = 0; i < posts.length; i++) {
+                title = posts[i]['title'];
+                body = posts[i]['body'];
+                id = posts[i]['id'];
+
+                content += '<div class="post">' +
+                    '<div class="title">' + id + '. ' + title + '</div>' +
+                    '<div>' + body +
+                    ' <a href="javascript:void(0);" onclick="loadComments(' + id + ')">comments</a>' +
+                    '<div id="comments-' + id + '"></div>' +
+                    '</div>' +
+                    '</div>';
+            }
+
+            document.getElementById('posts').innerHTML = content;
+        }
+
+        function drawComments(comments) {
+            let content = '';
+            let name, body, postId;
+            for (let i = 0; i < comments.length; i++) {
+                name = comments[i]['name'];
+                body = comments[i]['body'];
+                postId = comments[i]['postId'];
+
+                content += '<div class="comment">' +
+                    '<div class="name">' + name + '</div>' +
+                    '<div>' + body + '</div>' +
+                    '</div>';
+            }
+
+            content = '<h3>Comments</h3><hr>' + content;
+
+            document.getElementById('comments-' + postId).innerHTML = content;
+        }
+
+        function loadComments(id) {
+            dataLoader(
+                'https://jsonplaceholder.typicode.com/posts/' + id + '/comments',
+                drawComments
+            );
+        }
+        */
+
+        const dataLoader = function(url, callback) {
+            fetch(url)
+                .then((response) => response.json())
+                .then((data) => callback(data));
+        };
+
+        const checkType = function(obj, keys, type) {
+            if (typeof keys === 'string') {
+                keys = [keys];
+            }
+
+            for (let i = 0; i < keys.length; i++) {
+                if (!obj.hasOwnProperty(keys[i]) ||
+                    typeof obj[keys[i]] !== type
+                ) {
+                    return false;
+                }
+            }
+
+            return true;
+        };
+
+        const drawUsers = function(users) {
+            let name, email;
+            let div = document.getElementById('users');
+
+            for (let i = 0; i < users.length; i++) {
+
+                if (!checkType(users[i], ['name', 'email'], 'string')) {
+                    continue;
+                }
+
+                name = users[i]['name'];
+                email = users[i]['email'];
+
+                /*
+                let elementName = document.createElement('div');
+                let elementEmail = document.createElement('div');
+                let element = document.createElement('div');
+
+                elementName.appendChild(document.createTextNode(name));
+                elementEmail.appendChild(document.createTextNode(email));
+
+                element.appendChild(elementName);
+                element.appendChild(elementEmail);
+                element.className = 'user';
+                elementName.className = 'name';
+                div.appendChild(element);
+                */
+
+                div.innerHTML +=
+                    `<div class="user">
+                        <div class="name">${name}</div>
+                        <div>${email}</div>
+                    </div>`;
+
+                    /*
+                div.innerHTML += '<div class="user">' +
+                    '<div class="name">' + name + '</div>' +
+                    '<div>' + email + '</div>' +
+                    '</div>';
+                    */
+            }
+        };
+
+        const loadUsers = function() {
+            dataLoader(
+                'https://jsonplaceholder.typicode.com/users',
+                drawUsers
+            );
+        }
+
+        loadUsers();
+        //app.drawUsers();
+
+        //dataLoader('https://jsonplaceholder.typicode.com/posts', drawPosts);
+    </script>
+
+
+</body>
+
+</html>
