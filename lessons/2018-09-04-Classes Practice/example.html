@@ -1,0 +1,27 @@
+<script>
+class Dog {
+  constructor(name, birthYear) {
+    this._name = name;
+    this.birthYear = birthYear;
+    this._age = null;
+    
+    this.calculateAge();
+  }
+  get name() {
+    return this._name;
+  }
+  get age() {
+    return this._age;
+  }
+  
+  calculateAge() {
+    this._age = (new Date()).getFullYear() - this.birthYear;
+  }
+}
+
+const dog = new Dog('Classy Rex', 2013);
+console.log(typeof dog, dog.name, dog.age);
+dog.age = 33;
+console.log(dog.name, dog.age);
+
+</script>
