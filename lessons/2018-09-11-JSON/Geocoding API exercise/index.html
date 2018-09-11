@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Geocoder</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- TODO: Put your HTML code in here -->
+    <div class="wrapper">
+      <form id="searchForm">
+        <input type="text" id="address" class="form-control" placeholder="Type an address">
+        <input type="submit" value="Geocode!" class="btn btn-default">
+      </form>
+      <p id="coordinates"></p>
+      <div id="map" style="height: 300px"></div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="build/application.js"></script>
+  </body>
+</html>
