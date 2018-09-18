@@ -1,0 +1,25 @@
+.end-img{
+    bottom: 26rem;
+    position: relative;
+    width: 100vw;
+    height: 69vh;
+    background-color: blue;
+    transform: skewY(26deg);
+    z-index: -2000;
+}
+
+.container-fluid{
+    padding: 0 !important;
+}
+
+.bg-secondary{
+    height: 20vh;
+    padding: 3rem 0rem 3rem 0rem!important;
+    background-color: #4a2b28 !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.mx-auto > * {
+    padding:1.2rem;
+}

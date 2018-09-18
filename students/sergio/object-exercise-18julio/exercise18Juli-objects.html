@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Object Practice</title>
+    <style>
+        #wrapper {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #restaurantOutput {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h3 {
+            padding-top: 2rem;
+            font-size: 2rem;
+            color: blue;
+        }
+
+        #orderOutput {
+            padding-top: 2rem;
+            font-size: 2rem;
+            color: blue;
+        }
+
+        input {
+            border-style: none;
+            width: 300px;
+            height: 60px;
+            color: white;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="orderOutput" style="position:fixed; width: 300px; height: 70px; top: 2rem; right: 1rem;"></div>
+
+    <div id="wrapper">
+        <h3>Restaurant</h3>
+        <div id="restaurantOutput">
+
+        </div>
+
+        <div id="orderOutput"></div>
+    </div>
+
+
+    <script>
+        /* The Restaurant App
+        Never forget the food at your favorite restaurant!
+        
+        Create an object to hold information on your favorite restaurant. It should have properties 
+        for name (a string), opening time (a number), closing time (a number) and entrees (an array of strings).
+        On your html page, log the restaurant information so it looks like:
+        
+        Oases
+        Opens: 2 pm
+        Closes: 10 pm
+        Entrees:
+        Falafel
+        Hummus
+        Pizza
+        Schwarma in Wrap
+        
+        
+        
+        
+        
+        BONUS: Add a book"Order Delivery!" button below the information. When clicked, 
+        it should reveal additional 
+        text below itbook that says "Delivery not available at this time - Go to sleep" 
+        if current time is outside 
+        of the time parameters. If the restaurant is open, it should reveal "Delivery on 
+        its way!" */
+        /* The Reading List
+        Keep track of which books you read and which books you want to read!
+        Create an array of objects, where each object describes a book and has properties for the title 
+        (a string), author (a string), and alreadyRead (a boolean indicating if you read it yet).
+        Iterate through the array of books. For each book, log the book title and book author like so: 
+        "The Hobbit by J.R.R. Tolkien".
+        Now use an if/else statement to change the output depending on whether you read it yet or not. 
+        If you read it, log a string like 'You already read "The Hobbit" by J.R.R. Tolkien', and if not, 
+        log a string like 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'
+        */
+
+        let output = document.querySelector('#restaurantOutput');
+        let orderOutput = document.querySelector('#orderOutput');
+
+        let timeNow = new Date();
+        let hours = timeNow.getHours();
+
+        // let hours = 23 // to check if its work!
+        console.log(hours);
+
+        let restaurantOrient = {
+            image: "images/image.jpg",
+            name: 'Oases',
+            opens: 10,
+            currentime: hours,
+            closes: 22,
+            entrees: [' Falafel', ' Hummus', ' Pizza', ' Schwarma in Wrap'],
+            delivery: function () {
+                if ((this.currentime > this.opens) && (this.currentime < this.closes)) {
+                    // console.log("Delivery on its way!")
+                    return "Delivery on its way!";
+                }
+                else {
+                    // console.log("Delivery not available at this time - Go to sleep")
+                    return "Delivery not available at this time - Go to sleep";
+                }
+
+            }
+        }
+        let restaurantSpain = {
+            image: "images/image1.JPG",
+            name: 'Torero',
+            opens: 9,
+            currentime: hours,
+            closes: 10,
+            entrees: [' Paella', ' Cochinillo', ' Asado', ' Tortilla'],
+            delivery: function () {
+                if ((this.currentime > this.opens) && (this.currentime < this.closes)) {
+                    // console.log("Delivery on its way!")
+                    return "Delivery on its way!";
+                }
+                else {
+                    // console.log("Delivery not available at this time - Go to sleep")
+                    return "Delivery not available at this time - Go to sleep";
+                }
+
+            }
+        }
+
+        function order(id) {
+            console.log(id);
+            orderOutput.style.padding = "3rem";
+
+            if(id =="oases"){
+            orderOutput.innerHTML = restaurantOrient.delivery(id);
+            }
+            if(id =="torero"){
+            orderOutput.innerHTML = restaurantSpain.delivery(id);
+            }
+
+        }
+
+        output.innerHTML = `<h3>Name:${restaurantOrient.name}</h3>
+            <img src=${restaurantOrient.image} style="width: 300px">
+            <ul style="padding: 2rem; width: 270px;"><li>Opens at: ${restaurantOrient.opens}pm,</li>
+            <li>close at: ${restaurantOrient.closes}pm,</li>
+            <li>entrees: ${restaurantOrient.entrees}</li>
+            </ul>
+            <input type="button" class="myButton" id ="oases" onclick="order(id)" value="Order Delivery!">
+            
+            <h3>Name:${restaurantSpain.name}</h3>
+            <img src=${restaurantSpain.image} style="width: 300px">
+            <ul style="padding: 2rem; width: 270px;"><li>Opens at: ${restaurantSpain.opens}pm,</li>
+            <li>close at: ${restaurantSpain.closes}pm,</li>
+            <li>entrees: ${restaurantSpain.entrees}</li>
+            </ul>
+            <input type="button" class="myButton" id ="torero" onclick="order(id)" value="Order Delivery!">`
+
+
+
+        ///lets use each input separately
+
+        let inputsArray = [];
+        let orderInputs = document.getElementsByTagName('input');
+            console.log(orderInputs);
+
+        for (let i = 0; i < orderInputs.length; i++) {
+            console.log(orderInputs[i]);
+            }
+        
+        
+        // inputsArray.push(orderInput);
+
+        // for (let i = 0; i < inputsArray.length; i++) {
+        //     }
+        // };
+
+
+        ///books list/////
+
+        let books = [
+            {
+                title: "el Quijote",
+                Author: "Cervantes",
+                alreadyRead: true
+            },
+            {
+                title: "Hamlet",
+                Author: "Shakespeare",
+                alreadyRead: false
+            },
+            {
+                title: "I Quing",
+                Author: "Anonimus",
+                alreadyRead: true
+            },
+            {
+                title: "How to kill yourself with a bubble gum",
+                Author: "Napoleon Bonaparte",
+                alreadyRead: false
+            }
+
+        ]
+
+        for (let book of books) {
+            if (book.alreadyRead == true) {
+                console.log(`You already read ${book.title}`);
+            } else {
+
+                console.log(`You still need to read ${book.title}`);
+            }
+        }
+
+
+        //////////other way to do that ////////////////////////////////
+
+        books.forEach(function (book) {
+
+            if (book.alreadyRead == true) {
+                console.log(`You already read ${book.title}`);
+            } else {
+
+                console.log(`You still need to read ${book.title}`);
+            }
+        });
+
+
+
+
+    </script>
