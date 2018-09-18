@@ -1,0 +1,31 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #b5b8bc;
+}
+
+section {
+  display: block;
+  max-width: 400px;
+  padding: 100px;
+  margin: auto;
+  background: #e5ce5e;
+}
+h1 {
+  text-align: center;
+  padding: 10px;
+}
+div {
+  margin: 20px auto;
+}
+}
+select {
+  display: block;
+}
+label:focus {
+  border: 1px solid red;
+}
+input {
+  border-radius: 0;
+  padding: 20px 5px;
+}

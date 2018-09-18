@@ -1,0 +1,57 @@
+html body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: 'Slabo 27px', serif;
+  color: #777;
+}
+
+header {
+  background-image: url(bg_001.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 200px 20px;
+}
+
+header div {
+  max-width: 600px;
+  color: #444;
+  margin: auto;
+
+}
+
+header div p {
+  max-width: 340px;
+  color: #777777;
+}
+
+main {
+  margin: 60px auto;
+}
+main p {
+  margin: auto;
+  max-width: 600px;
+  padding: 10px;
+
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+footer div {
+  max-width: 600px;
+  margin: auto;
+
+  color: #FFF;
+  font-weight: bold;
+}
+
+footer div p {
+  display: inline-block;
+}

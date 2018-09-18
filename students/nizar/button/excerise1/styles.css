@@ -1,0 +1,50 @@
+html, body {
+  margin: 0;
+  padding: 20px;
+  font-size: 14px;
+  font-family: cursive;
+}
+
+h1 {
+  color: blue;
+}
+
+button {
+  padding: 40px;
+  margin: 5px;
+}
+
+p {
+    display: none;
+    background-color: yellow;
+    padding: 20px;
+}
+
+div:hover p {
+    display: block;
+}
+
+.b1 {
+  border: 1px solid darkgrey;
+  border-radius: 0;
+  background-color: lightgrey;
+}
+.b1:hover {
+  border: 1px solid red;
+  border-radius: 0;
+  background-color: purple;
+  color: white;
+}
+.b2 {
+  border: 1px solid black;
+  border-radius: 0;
+  background-color: darkgrey;
+
+}
+
+.b2:hover {
+  border: 1px solid orange;
+  border-radius: 0;
+  background-color: yellow;
+  color: black;
+}

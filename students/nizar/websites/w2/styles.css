@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: black;
+  color: white;
+}
+body div .background{
+  background-image: url(bg_001.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto;
+    border: 1px solid red;
+}
+
+nav {
+  max-width: 800px;
+  margin:auto;
+  padding: 40px;
+}
+
+nav div {
+  display: inline-block;
+  padding: 20px;
+    border: 1px solid red;
+
+}
+nav div a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+    border: 1px solid red;
+}
+nav .navlist {
+  float: right;
+}
+
+nav .logo {
+  background-image: url(logo_001.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 80px;
+  border: 1px solid red;
+}
+main {
+  position: relative;
+  max-width: 800px;
+  margin: 80px auto;
+    border: 1px solid red;
+}
+
+main div {
+  position: absolute;
+  max-width: 480px;
+  margin: 80px 0;
+}
+
+
+.botton1 {
+  background-color: green;
+  padding: 20px 60px;
+  width: 230px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.botton2 {
+  background-color: blue;
+  padding: 20px 60px;
+  border-radius: 10px;
+}
+
+.phone {
+  position: relative;
+  border: 1px solid white;
+  max-width: 800px;
+  margin: auto;
+}
+.iback {
+  position: absolute;
+  top: 0;
+  background-image: url(phone_002.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 300px 150px;
+  border: 1px solid red;
+}
+
+.ifront {
+  position: absolute;
+  background-image: url(phone_001.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 300px 150px;
+  border: 1px solid red;
+}

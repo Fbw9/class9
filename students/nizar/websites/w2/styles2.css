@@ -1,0 +1,37 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url(bg_001.jpg);
+}
+
+body div {
+  max-width: 800px;
+  margin: 100px auto;
+  border: 1px solid red;
+
+}
+
+div nav {
+  display: inline-block;
+  padding: 40px 0;
+  font-weight: bold;
+  border: 1px solid white;
+}
+
+div .logo {
+  padding: 30px 80px;
+  background-image: url(logo_001.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+div nav a {
+  text-decoration: none;
+  margin-right: 5px;
+  color: white;
+  float: right;
+}

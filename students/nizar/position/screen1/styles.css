@@ -1,0 +1,75 @@
+
+    .relative {
+      background-color: gray;
+      position: relative;
+      height: 300px;
+      margin: 30px;
+    }
+
+    .right {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: green;
+      border: 2px solid black;
+      height: 250px;
+      width: 300px;
+    }
+
+    .left {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: green;
+      border: 2px solid black;
+      height: 250px;
+      width: 300px;
+    }
+
+    .blue {
+      position: absolute;
+      background-color: blue;
+      top: 340px;
+      left: 400px;
+      width: 450px;
+      height: 340px;
+    }
+
+    .red {
+      position: absolute;
+      background-color: red;
+      top: 40px;
+      left: 700px;
+      width: 450px;
+      height: 340px;
+    }
+
+    .green {
+      position: absolute;
+      background-color: green;
+      top: 340px;
+      right: 400px;
+      width: 450px;
+      height: 340px;
+    }
+
+    .black {
+      position: absolute;
+      background-color: black;
+      bottom: 40px;
+      left: 700px;
+      width: 450px;
+      height: 340px;
+    }
+
+    .title {
+      position: fixed;
+      bottom: 400px;
+      left: 450px;
+      background-color: yellow;
+      font-size: 100px;
+      text-align: center;
+      width: auto;
+      height: auto;
+      padding: 10px;
+    }

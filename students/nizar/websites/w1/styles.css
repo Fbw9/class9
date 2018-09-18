@@ -1,0 +1,85 @@
+html body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: arial, serif;
+  color: #777;
+}
+/* ======Navigation======== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+nav div a {
+  display: inline-block;
+  color: white;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.logging {
+  float: right;
+}
+/* ========Header======== */
+header {
+  background-image: url(bg_001.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+header div {
+  max-width: 600px;
+  color: white;
+  margin: auto;
+}
+/* ======Articles======== */
+main {
+  margin: 100px auto;
+}
+main div {
+  max-width: 600px;
+  margin: auto;
+
+}
+main div span {
+  float: right;
+  padding-right: 10px;
+}
+
+main div article .image {
+  float: left;
+  width: 230px;
+  height: 165px;
+  margin: 0 10px 10px 0;
+  border: 1px solid white;
+  background-image: url(img_001.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+footer div {
+  max-width: 600px;
+  display: block;
+  font-size: 13px;
+  margin: auto;
+}
+
+footer div div {
+  display: inline-block;
+  margin: 20px auto;
+}
