@@ -170,15 +170,15 @@ var anotherArray = ['hello','world','again'];
     'arrays-lines': [
 `
 var fruits = [
-  'apples',
-  'banana',
-  'pineapple',
+    'apples',
+    'banana',
+    'pineapple',
 ];
 
 var animals = [
-  'cats',
-  'dogs',
-  'beavers'
+    'cats',
+    'dogs',
+    'beavers'
 ];
 
 var bugs = [
@@ -188,32 +188,32 @@ var bugs = [
 `,
 `
 var fruits = [
-  'apples',
-  'banana',
-  'pineapple'
+    'apples',
+    'banana',
+    'pineapple'
 ];
 
 var animals = [
-  'cats', 'dogs',
-  'beavers'
+    'cats', 'dogs',
+    'beavers'
 ];
 
 var bugs = [
-'typo',
-'missing semicolons',
-'no trailing spaces'
+    'typo',
+    'missing semicolons',
+    'no trailing spaces'
 ];
 `
     ],
     typeof: [
 `
 if (typeof myVariable === 'string') {
-  // Statement...
+    // Statement...
 }
 `,
 `
 if (typeof (myVariable) === 'string') {
-  // Statement...
+    // Statement...
 }
 `
     ],
