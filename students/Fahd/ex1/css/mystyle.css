@@ -1,0 +1,32 @@
+h1 {
+    color:rebeccapurple;
+}
+
+
+.rose {
+    text-align: right; text-decoration:overline;
+}
+
+#honey {
+
+font-size: 25px; color: navy; /* the color is amazing*/
+
+border-radius: 25px;
+border: 2px solid #73AD21;
+padding: 20px; 
+width: 1100px;
+height: 150px;
+margin-left: 100px;
+}
+ul{
+    list-style-type: none;
+}
+.picture{
+    width: 40px;height: 20px;
+}
+.container{
+    margin-top:0;
+    width:200px;
+    height: 250px;
+    border:1px solid red;
+}
