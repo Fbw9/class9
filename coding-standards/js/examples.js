@@ -199,9 +199,9 @@ var animals = [
 ];
 
 var bugs = [
-    'typo',
-    'missing semicolons',
-    'no trailing spaces'
+'typo',
+  'missing semicolons',
+'no trailing spaces'
 ];
 `
     ],
