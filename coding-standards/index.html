@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript coding standards</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <script src="js/examples.js"></script>
+    <script>
+
+        function example(name, error) {
+            let index = 0,
+                preClass = '';
+
+            if (error) {
+                index = 1;
+                preClass = 'error';
+            }
+
+            document.write(`<pre class="${preClass}"><code class="language-javascript">${examples[name][index]}</code></pre>`);
+        }
+
+    </script>
+</head>
+<body>
+
+    <div class="container">
+    <h1>FBW9 JavaScript coding standards</h1>
+    last updated 18 September 2018
+
+    <hr>
+    <!--
+    npm install eslint -g
+    npm install eslint-plugin-react -g
+    npm install eslint-plugin-compat -g
+    npm install babel-eslint -g
+    <hr>
+    atom  - linter-eslint
+    <hr>
+-->
+
+    <ul>
+        <li><a href="#indenting" rel="nofollow">Indenting</a></li>
+        <li><a href="#blocks" rel="nofollow">Blocks</a></li>
+        <li><a href="#semicolins" rel="nofollow">Semicolons </a></li>
+        <li><a href="#camelcasing" rel="nofollow">Variable Names / CamelCasing</a></li>
+        <li><a href="#variablesandarrays" rel="nofollow">Variables and Arrays</a></li>
+        <li><a href="#typeof" rel="nofollow">Typeof</a></li>
+        <li><a href="#functions" rel="nofollow">Functions</a></li>
+        <li><a href="#constructors" rel="nofollow">Constructors</a></li>
+        <li><a href="#comments" rel="nofollow">Comments</a></li>
+        <li><a href="#concatenation" rel="nofollow">String concatenation</a></li>
+        <li><a href="#structures" rel="nofollow">Control structures</a> (if, while, etc.)</li>
+        <li><a href="#operators" rel="nofollow">Operators</a></li>
+    </ul>
+
+    <h2 id="indenting">Indenting</h2>
+    <ul>
+        <li>All code MUST indent using four (4) space characters,</li>
+        <li>All code MUST NOT indent using tab characters,</li>
+        <li>All code MUST NOT end with trailing whitespace.</li>
+    </ul>
+
+    <table>
+        <tr>
+            <td>
+                <script>example('indenting')</script>
+            </td>
+            <td>
+                <script>example('indenting', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <h2 id="blocks">Blocks</h2>
+    <p>
+        All blocks MUST use braces.<br>
+        All blocks SHOULD be in multi-lines.
+    </p>
+    <table>
+        <tr>
+            <td>
+                <script>example('blocks')</script>
+            </td>
+            <td>
+                <script>example('blocks', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <h2 id="semicolins">Semi-colons</h2>
+    <p>
+        JavaScript allows optional "semi-colon insertion". Fbw9 standards do not.
+    </p>
+
+    &bull; All statements (except
+    <code class="language-javascript">for, function, if, switch, try, while</code>)
+    MUST be followed by a semi-colon (<code class="language-php">;</code>),
+
+    <table>
+        <tr>
+            <td>
+                <script>example('semicolons')</script>
+            </td>
+            <td>
+                <script>example('semicolons', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    &bull; Return values MUST start on the same line as the
+    <code class="language-javascript">return</code> keyword.
+
+    <table>
+        <tr>
+            <td>
+                <script>example('semicolon-return')</script>
+            </td>
+            <td>
+                <script>example('semicolon-return', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <p><strong>EXCEPTIONS:</strong></p>
+
+    &bull; Anonymous functions assigned to a variable MUST be followed by a semi-colon.
+    <table>
+        <tr>
+            <td>
+                <script>example('semicolon-anonymous')</script>
+            </td>
+            <td>
+                <script>example('semicolon-anonymous', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    &bull; do/while control structures MUST be followed by a semi-colon
+    <table>
+        <tr>
+            <td>
+                <script>example('semicolon-while')</script>
+            </td>
+            <td>
+                <script>example('semicolon-while', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <h2 id="camelcasing">Variable Names / CamelCasing</h2>
+    <p>
+        For variables that are not <a href="#constants" rel="nofollow">constants</a> or
+        <a href="#constructors" rel="nofollow">constructors</a>, multi-word variables and
+        functions MUST be lowerCamelCased.
+    </p>
+    <p>
+        The first letter of each variable or function SHOULD be lowercase, and the first
+        letter of subsequent words MUST be capitalized. There SHOULD NOT be underscores
+        between the words.
+    </p>
+
+    <table>
+        <tr>
+            <td>
+                <script>example('camelcase')</script>
+            </td>
+            <td>
+                <script>example('camelcase', true)</script>
+            </td>
+        </tr>
+    </table>
+
+
+    <h2 id="variablesandarrays">Variables and Arrays</h2>
+    <p>
+        All variables MUST be declared only once. All variables SHOULD be declared at
+         the beginning of a function.
+     </p>
+    <p>
+        Each variable assignment MUST be declared on a separate line -
+        including variables that are only declared but do ncamelcaseot get a value assigned.
+    </p>
+
+    <table>
+        <tr>
+            <td>
+                <script>example('variables')</script>
+            </td>
+            <td>
+                <script>example('variables', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <h3 id="constants">Constants</h3>
+    <p>
+        Pre-defined constants MUST be all-uppercase and words separated by
+        underscores: <code class="language-php">UPPER_UNDERSCORED</code>.
+    </p>
+    <table>
+        <tr>
+            <td>
+                <script>example('constants')</script>
+            </td>
+            <td>
+                <script>example('constants', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <h3 id="arrays">Arrays</h3>
+    <p>
+        Arrays MUST be formatted with one space separating each element and the assignment operator,
+        but NO space before or after the square brackets:
+    </p>
+    <table>
+        <tr>
+            <td>
+                <script>example('arrays')</script>
+            </td>
+            <td>
+                <script>example('arrays', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        If the line is longer than 80 characters, each element SHOULD be broken into its own line,
+         and indented one level.
+     </p>
+     <p>
+         Use trailing comma after last element in multi line arrays. Trailing commas
+         simplify adding and removing items to objects and arrays, since only the lines
+         you are modifying must be touched. Also this leads to cleaner git diffs,
+         when an item is added or removed from an object or array.
+     </p>
+
+     <table>
+         <tr>
+             <td>
+                 <script>example('arrays-lines')</script>
+             </td>
+             <td>
+                 <script>example('arrays-lines', true)</script>
+             </td>
+         </tr>
+     </table>
+
+     <h3>Typeof</h3>
+     <p>In type comparisons, the value tested MUST NOT be wrapped in parenthesis.</p>
+     <table>
+         <tr>
+             <td>
+                 <script>example('typeof')</script>
+             </td>
+             <td>
+                 <script>example('typeof', true)</script>
+             </td>
+         </tr>
+     </table>
+
+    <h2 id="functions">Functions</h2>
+    <h3>Function declarations and method names</h3>
+
+    <p>
+        &bull; Avoid single letter names. Be descriptive with your naming.
+    </p>
+    <table>
+        <tr>
+            <td>
+                <script>example('functions-naming')</script>
+            </td>
+            <td>
+                <script>example('functions-naming', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        &bull; Use camelCase when naming functions.
+    </p>
+    <table>
+        <tr>
+            <td>
+                <script>example('functions-camelcase')</script>
+            </td>
+            <td>
+                <script>example('functions-camelcase', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        &bull; In function expression, the <code class="language-php">function</code> keyword MUST be followed by one space.<br>
+        &bull; Named functions MUST NOT have a space between the function name and the following left parenthesis.
+    </p>
+
+    <table>
+        <tr>
+            <td>
+                <script>example('functions-named')</script>
+            </td>
+            <td>
+                <script>example('functions-named', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        &bull; Optional arguments (using default values) SHOULD be defined at the end of the function signature.
+    </p>
+
+    <table>
+        <tr>
+            <td>
+                <script>example('functions-value')</script>
+            </td>
+            <td>
+                <script>example('functions-value', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        &bull; Every function SHOULD attempt to return a meaningful value.
+    </p>
+
+    <h3 id="functioncalls">Function Calls</h3>
+    <p>
+        &bull; Functions MUST be called with no spaces between the function name,
+        the opening parenthesis, and the first parameter.<br>
+        &bull; There MUST be one space between commas and each parameter,
+        and there MUST NOT be a space between the last parameter,
+        the closing parenthesis, and the semicolon.<br>
+        &bull; There MUST be one space on either side of an equals sign used to assign
+        the return value of a function to a variable.
+    </p>
+
+    <table>
+        <tr>
+            <td>
+                <script>example('functions-calls')</script>
+            </td>
+            <td>
+                <script>example('functions-calls', true)</script>
+            </td>
+        </tr>
+    </table>
+
+
+    <br>
+    <h2 id="constructors">Constructors</h2>
+    <p>
+        Constructor function or classess MUST be given names with an initial uppercase character (PascalCase).
+    </p>
+    <p>
+        Constructors are functions that are designed to be used with the <code class="language-php">new</code> prefix.
+        The <code class="language-php">new</code> prefix creates a new object based on the function's prototype,
+        and binds that object to the function's implied this parameter. JavaScript doesn't
+        issue compile-time warning or run-time warnings if a required <code class="language-php">new</code> is
+        omitted. If you do not use the <code class="language-php">new</code> prefix, no new object will be made
+        and operations will be bound to the global object instead.
+    </p>
+    <p>
+        A function with an initial uppercase name MUST NOT be called without a
+        <code class="language-php">new</code> operator.
+    </p>
+
+    <table>
+        <tr>
+            <td>
+                <script>example('constructors')</script>
+            </td>
+            <td>
+                <script>example('constructors', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <h2 id="comments">Comments</h2>
+    <p>
+        Inline documentation for source files MUST follow the
+        <a href="http://usejsdoc.org/" target="_blank">JSDoc</a> documentation and comment standards.
+    </p>
+    <p>
+        Non-JSDoc comments are strongly RECOMMENDED.
+    </p>
+    <p>
+        A general rule of thumb is that if you look at a section of code and think
+        "Wow, I don't want to try and describe that", you SHOULD comment it before you forget how it works.
+        Comments MAY be removed by JS compression utilities later, so they don't negatively impact
+        the file download size.
+    </p>
+    <p>
+        Non-JSDoc comments SHOULD use capitalized sentences with punctuation. Comments SHOULD be on a
+        separate line, immediately before the code line or block they reference.
+    </p>
+
+    <table>
+        <tr>
+            <td>
+                <script>example('comments')</script>
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        If each line of a list needs a separate comment, comments MAY be placed on the
+        same line and MAY be formatted to a uniform indent for readability.
+    </p>
+
+
+    <br>
+    <h2 id="concatenation">String Concatenation</h2>
+    <p>
+        Expressions MUST be separated with one space before and after the
+        <code class="language-php">+</code> operator to improve readability.<br>
+        The concatenating assignment operator (<code class="language-php">+=</code>) MUST
+        be separated with one space on each side as with the assignment operator.
+    </p>
+
+    <table>
+        <tr>
+            <td>
+                <script>example('concatenation')</script>
+            </td>
+            <td>
+                <script>example('concatenation', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <h2 id="structures">Control Structures</h2>
+    <p>
+        Control statements MUST have one space between the control keyword and opening parenthesis,
+        to distinguish them from function calls.
+    </p>
+    <p>
+        Control structures MUST always use curly braces, even in situations where they are optional.
+         Having them increases readability and decreases the likelihood of logic errors being
+         introduced when new lines are added.
+     </p>
+    <p>
+        These include <code class="language-php">if, for, while, switch</code>.
+    </p>
+
+    <table>
+        <tr>
+            <td>
+                <script>example('control')</script>
+            </td>
+            <td>
+                <script>example('control', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <h3 id="switch">switch</h3>
+    <table>
+        <tr>
+            <td>
+                <script>example('switch')</script>
+            </td>
+            <td>
+                <script>example('switch', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <h3 id="try">try</h3>
+    <table>
+        <tr>
+            <td>
+                <script>example('try')</script>
+            </td>
+            <td>
+                <script>example('try', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <h3 id="forin">for in</h3>
+    <p>
+        The body of every <code class="language-php">for in</code> statement MUST be wrapped
+        in an <code class="language-php">if</code> statement that performs the filtering.
+        It MAY select for a particular type or range of values, or it can exclude functions,
+        or it can exclude properties from the prototype.
+    </p>
+    <table>
+        <tr>
+            <td>
+                <script>example('for-in')</script>
+            </td>
+            <td>
+                <script>example('for-in', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        You MUST use the <code class="language-php">hasOwnProperty</code>
+        method to distinguish the true members of the object, which SHOULD be placed
+        inside the loop, not on the same line
+    </p>
+    <table>
+        <tr>
+            <td>
+                <script>example('for-in-has')</script>
+            </td>
+            <td>
+                <script>example('for-in-has', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <h2 id="operators">Operators</h2>
+    <h3 id="truefalse">Comparisons</h3>
+    <p>
+        The <code class="language-php">==</code> and <code class="language-php">!=</code>
+        operators do type coercion before comparing. This can lead to unexpected errors.
+    </p>
+    <p>
+        Strict equality MUST be used in comparisons (<code class="language-php">===</code> or
+        <code class="language-php">!==</code>).
+    </p>
+    <table>
+        <tr>
+            <td>
+                <script>example('comparsion')</script>
+            </td>
+            <td>
+                <script>example('comparsion', true)</script>
+            </td>
+        </tr>
+    </table>
+
+    <h3 id="comma">Comma Operator</h3>
+    <p>
+        You SHOULD NOT use the comma operator, with the exception of the control part in
+         <code class="language-php">for</code> statements.
+     </p>
+    <p>
+        The comma operator causes the expressions on either side of it to be executed in
+        left-to-right order, and returns the value of the expression on the right.
+    </p>
+    <p>
+        This can be confusing for users not familiar with the syntax and makes the code more
+        difficult to read and understand.
+    </p>
+    <table>
+        <tr>
+            <td>
+                <script>example('comma-operator', true)</script>
+            </td>
+        </tr>
+    </table>
+
+
+
+</div>
+<br><br><br><br>
+
+
+<script src="js/prism.js"></script>
+
+
+</body>
+</html>
