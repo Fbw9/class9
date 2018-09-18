@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Practice</title>
+</head>
+<body>
+
+  <div id="restaurantList"></div>
+  <br>
+  <button type="button" onclick="openClosed()">Order Delivery!</button>
+  <br>&nbsp;<br>
+  <div id="order"></div>
+
+
+  <br>&nbsp;<br>
+  <hr>
+  <br>&nbsp;<br>
+
+
+  <div id="books"></div>
+  <br>&nbsp;<br>
+  <div id="read-not-read"></div>
+
+<script>
+/* The Restaurant App
+Never forget the food at your favorite restaurant!
+
+Create an object to hold information on your favorite restaurant.
+It should have properties for name (a string), opening time (a number),
+closing time (a number) and entrees (an array of strings).
+
+On your html page, log the restaurant information so it looks like:
+Oases
+Opens: 2 pm
+Closes: 10 pm
+Entrees:
+Falafel
+Hummus
+Pizza
+Schwarma in Wrap
+
+BONUS: Add a "Order Delivery!" button below the information. When clicked,
+it should reveal additional text below it that says "Delivery not available
+at this time - Go to sleep" if current time is outside of the time parameters.
+If the restaurant is open, it should reveal "Delivery on its way!" */
+
+
+/* The Reading List
+
+Keep track of which books you read and which books you want to read!
+
+Create an array of objects, where each object describes a book and has
+properties for the title (a string), author (a string), and alreadyRead
+(a boolean indicating if you read it yet).
+
+Iterate through the array of books. For each book, log the book title
+and book author like so: "The Hobbit by J.R.R. Tolkien".
+
+Now use an if/else statement to change the output depending on whether
+you read it yet or not. If you read it, log a string like 'You already
+read "The Hobbit" by J.R.R. Tolkien', and if not, log a string like 'You
+still need to read "The Lord of the Rings" by J.R.R. Tolkien.'
+*/
+
+// restaurant list
+let restaurant = {
+  name: "Oases",
+  opens: 2,
+  closes: 10,
+  entrees: ["Falafel", "Humus", "Pizza", "Schwarma in Wrap"]
+};
+
+document.querySelector('#restaurantList').innerHTML = restaurant.name + "<br>Opens: "
++ restaurant.opens + " pm<br>Closes: " + restaurant.closes + " pm<br>Entrees:<br>"
++ restaurant.entrees[0] + "<br>" + restaurant.entrees[1] + "<br>" +
+restaurant.entrees[2] + "<br>" + restaurant.entrees[3];
+
+// restaurant delivery order
+function openClosed() {
+  let time = new Date();
+
+  if (time.getHours() >= 2 && time.getHours() < 22) {
+    document.querySelector('#order').innerHTML = "Delivery on its way!";
+  } else {
+    document.querySelector('#order').innerHTML =
+    "Delivery not available at this time - Go to sleep";
+  }
+}
+
+
+// book task
+let bookList = [
+  { title: "Title of Book no. 1", author: "Author A", alreadyRead: true },
+  { title: "Title of Book no. 2", author: "Author B", alreadyRead: false },
+  { title: "Title of Book no. 3", author: "Author C", alreadyRead: true },
+  { title: "Title of Book no. 4", author: "Author D", alreadyRead: false }
+]
+
+// book list no. 1
+let text = "";
+let i;
+
+for (i = 0; i < bookList.length; i++) {
+  document.querySelector('#books').innerHTML =
+   text += '\"' + bookList[i].title + '\"' + " by " + bookList[i].author + ".<br>";
+}
+
+
+// book list no. 2
+let textTwo = "";
+let x;
+
+for (x = 0; x < bookList.length; x++) {
+  if (bookList[x].alreadyRead === true) {
+    document.querySelector('#read-not-read').innerHTML =
+      textTwo += 'You already read \"'  + bookList[x].title + '\" by' + bookList[x].author + "."
+      + "<br>";
+  } else {
+    document.querySelector('#read-not-read').innerHTML =
+      textTwo += 'You still need to read \"' + bookList[x].title + '\" by ' + bookList[x].author + "."
+      + "<br>";
+  }
+}
+
+</script>
