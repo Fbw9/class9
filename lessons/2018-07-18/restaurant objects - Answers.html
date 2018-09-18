@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Practice</title>
+</head>
+<body>
+
+<script>
+// Pick one of your favorite restaurants in Berlin and create an object with the variable name - restaurant
+
+// Fill it with data ( key value pairs that don't have to be exact). Make sure to include keys: name, seatingCapacity, hasSpecial, and entrees using different data types as values.
+let restaurantOne = {
+  name: "Burger King",
+  seatingCapacity: 300,
+  hasSpecial: true,
+  mainDishes: ["Plastic burger", "Paper burger", "Chicken Strips"],
+  openRestaurant() {
+    return "WE ARE OPEN!!!!";
+  },
+  closeRestaurant() {
+    return "BK is CLOSED FOREVER";
+  }
+}
+
+let time = 16;
+
+let dailySpecials = {
+  breakfast: "15% off plastic breakfast sandwiches",
+  lunch: "2 for 1 chicken strips",
+  dinner: "5 for 1 mojitos!"
+}
+
+if (time < 12) {
+  var meal = "breakfast";
+} else if (time < 15 && time > 12) {
+  var meal = "lunch";
+} else if (time < 22 && time > 15) {
+  var meal = "dinner";
+}
+
+console.log(meal);
+console.log(dailySpecials[meal]);
+console.log(restaurantOne);
+
+// Now practice accessing properties and printing them to the console. Print the main dishes using dot notation
+// console.log(restaurantOne.mainDishes[0]);
+
+// Now print the seating capacity using dot notation
+// console.log(restaurantOne.seatingCapacity);
+
+// Print the main dishes again using bracket notation
+console.log(restaurantOne['mainDishes']);
+
+// Print the seating capacity again using bracket notation
+console.log(restaurantOne['seatingCapacity']);
+
+// Let's make another object to illustrate one advantage of using bracket over dot notation. Start by creating a new object called dailySpecials and write out the keys breakfast, lunch, and dinner. The values should be statements about the specials (i.e. "15% off breakfast").
+
+//Now create a conditional statement that equates the word meal to each one of your keys depending on the time of day
+
+//Make a variable called time. Use bracket notation to pull to display the current special.
+
+
+
+// Does it work with dot notation? Try it out!
+
+
+// Let's go back to our restaurants object and add appetizers and desserts to it using two different methods
+restaurantOne["desserts"] = ["hot sundae", "apple pie"];
+console.log(restaurantOne);
+restaurantOne.appetizers = ["french fries", "salad", "mojito"];
+
+
+// The food items have changed a bit because it is now summer! Use the same methods used to add an item, to edit some of the items in your entree, appetizer, and desserts
+restaurantOne["desserts"] = restaurantOne.desserts.concat(["strawberry pie"]);
+restaurantOne.appetizers = ["onion rings", "french fries"];
+
+
+// Let's now create methods that just print out a string when the restaurant opens or closes. Create a method called openRestaurant and closeRestaurant inside of the restaurant object
+
+//Now call on these two methods
+console.log(restaurantOne.closeRestaurant());
+
+
+// Let's practice using the 'this' keyword. Create another restaurant object.
+let restaurantTwo = {
+  name: "McDonalds",
+  restaurantOnFire: false,
+  openRestaurant() {
+    if(this.restaurantOnFire) {
+      return "WE ARE ON FIRE! Close premises";
+    } else {
+      return `${this.name} is open for business!`;
+    }
+  }
+};
+
+console.log(restaurantTwo.openRestaurant());
+// restaurantOne.openRestaurant = restaurantTwo.openRestaurant;
+console.log(restaurantOne.openRestaurant());
+
+// Add a key to your restaurants object called restaurantOnFire and set the boolean to false (hopefully by default there is no fire!)
+
+// Show the other way of using this - adds flexibility and allows the method to be used in other objects
+
+
+// Finally let's do some while/for loops on our restaurants to print out the entrees
+
+let item = 0;
+while (item < restaurantOne.mainDishes.length) {
+  console.log(restaurantOne.mainDishes[item]);
+  item++;
+}
+
+for (let item in restaurantOne) {
+  console.log(restaurantOne[item]);
+}
+
+
+</script>

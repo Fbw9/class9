@@ -1,0 +1,42 @@
+<script>
+
+// PROBLEM 1: Write a JavaScript program to get the volume of a Cylinder with four decimal places using object classes.
+
+// Volume of a cylinder : V = πr2h
+// where r is the radius and h is the height of the cylinder.
+
+
+
+// PROBLEM 2:
+// A) Create a class called Song() with two properties:
+//     > songName - i.e., 'A day in the Life'
+//     > bandName - i.e., 'The Beatles'
+// B) create a new instance of the class, storing it in a variable
+// C) Add two methods to the class:
+//     > countName - return the total number of words in the song name
+//     > createElement - create a new DOM element
+// D) Create an instance with the new keyword
+// E) Append the instance to the DOM
+
+
+// PROBLEM 3:
+
+function Dog (name) {
+  this.name = name
+}
+Dog.bark = function () {
+  console.log(this.name + ' says woof')
+}
+let fido = new Dog('fido')
+fido.bark()
+
+//QUESTION: I WANT MY DOG TO BARK. But it isn't :( Can you explain why it isn't?
+// TASK: Fix this using two methods we learned (i.e. classes and older syntax prototypes)
+
+
+//PROBLEM 4:
+//A)Create a class called employee with properties of first and last names and a method getName which prints out the full name.
+//B)Next, create a subclass called manager which inherits the same properties from employee and then adds an additional property called managedEmployees which will be set to a blank array.
+// C) Finally, create a method for manager called addEmployee which takes one argument, employee, and when called adds an employee to the managedEmployees array.
+// D) Bonus create a calculateAge method to employee like we did in class (you will have to add additional properties, too)
+</script>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Functions</title>
+</head>
+<body>
+
+  <!-- fortune teller -->
+  <!-- button onclick="tellFortune()">Click to see your fortune</button>
+  <br><br>
+  <div id="fortune-teller"></div>
+
+  <br><br -->
+
+  <h2>Fortune Teller</h2>
+  <button onclick="tellFortuneTwo()">Click to see your fortune</button>
+  <br><br>
+  <div id="fortune-teller-2"></div>
+
+  <br><hr>
+
+  <!-- puppy age -->
+  <h2>Puppy Age Converter</h2>
+  Enter puppy's age here:<br><br>
+  <input type="text" id="human-years" value="0">
+  <br><br>
+  <button onclick="calcDogYears()">Calculate age in dog years</button>
+  <br><br>
+  <div id="dog-years"></div>
+
+  <br><hr>
+
+  <!-- lifetime supply -->
+  <h2>Lifetime Supply</h2>
+  <div id="lifetime-sypply"></div>
+
+  <br><hr>
+
+  <!-- temperature converters -->
+  <h2>Celsius to Fahrenheit Converter</h2>
+  Enter Celsius temperature here:<br><br>
+  <input type="text" id="degrees-celsius" value="0">
+  <br><br>
+  <button onclick="celsiusToFahrenheit()">Convert to Fahrenheit</button>
+  <br><br>
+  <div id="celsius-to-fahrenheit"></div>
+
+  <br><hr>
+
+  <h2>Fahrenheit to Celsius Converter</h2>
+  Enter Fahrenheit temperature here:<br><br>
+  <input type="text" id="degrees-fahrenheit" value="0">
+  <br><br>
+  <button onclick="fahrenheitToCelsius()">Convert to Celsius</button>
+  <br><br>
+  <div id="fahrenheit-to-celsius"></div>
+
+
+<script>
+/*
+The Fortune Teller
+Why pay a fortune teller when you can just program your fortune yourself?
+
+Write a function named tellFortune that:
+takes 4 arguments: number of children, partner's name, geographic location, job title.
+outputs your fortune to the screen like so: "You will be a X in Y, and married to Z with N kids."
+Call that function 3 times with 3 different values for the arguments.
+*/
+
+let jobTitle = ["mason", "taylor", "juweller", "manager", "pilot"];
+let geoLocation = ["UK", "Belgium", "France", "USA", "Canada"];
+let namePartner = ["Betty", "Suzan", "June", "Anna", "Mary"];
+let numberChild = ["three", "two", "five", "four", "six"];
+let text = '';
+let i = 0;
+
+// prints only one line at once
+function tellFortune() {
+  let text = '';
+  if (i <= 3) {
+    text = 'You will be a ' + jobTitle[i] + ' in ' + geoLocation[i] + ', and married to ' + namePartner[i] + ' with ' + numberChild[i] + ' kids.';
+  i++;
+  } else {
+    text = 'You will be a ' + jobTitle[i] + ' in ' + geoLocation[i]
+      + ', and married to ' + namePartner[i] + ' with ' + numberChild[i] + ' kids.';
+    i = 0;
+  }
+  document.querySelector('#fortune-teller').innerHTML = text;
+}
+
+// prints 5 different lines at once
+/*
+function tellFortune() {
+  for (i; i < 5; i++) {
+    text += 'You will be a ' + jobTitle[i] + ' in ' + geoLocation[i]
+      + ', and married to ' + namePartner[i] + ' with ' + numberChild[i] + ' kids. <br>';
+  }
+  document.querySelector('#fortune-teller').innerHTML = text;
+}
+*/
+
+// using a random generator without excluding identical results one after another
+function tellFortuneTwo() {
+  let i = Math.floor(Math.random() * 5);
+  let j = Math.floor(Math.random() * 5);
+  let k = Math.floor(Math.random() * 5);
+  let l = Math.floor(Math.random() * 5);
+  text = 'You will be a ' + jobTitle[i] + ' in ' + geoLocation[j]
+    + ', and married to ' + namePartner[k] + ' with ' + numberChild[l] + ' kids.';
+  document.querySelector('#fortune-teller-2').innerHTML = text;
+}
+
+
+/*The Puppy Age Calculator
+You know how old your dog is in human years, but what about dog years? Calculate it!
+
+Write a function named calculateDogAge that:
+takes 1 argument: your puppy's age.
+calculates your dog's age based on the conversion rate of 1 human year to 7 dog years.
+outputs the result to the screen like so: "Your doggie is NN years old in dog years!"
+Call the function three times with different sets of values.
+Bonus: Add an additional argument to the function that takes the conversion rate of human to dog years.
+*/
+
+function calcDogYears() {
+  let humanYears = document.querySelector('#human-years').value;
+  let dogYears = humanYears * 7;
+  document.querySelector('#dog-years').innerHTML = 'Puppy is ' + dogYears + ' dog years old.';
+}
+
+
+/*The Lifetime Supply Calculator
+Ever wonder how much a "lifetime supply" of your favorite snack is? Wonder no more!
+
+Write a function named calculateSupply that:
+takes 2 arguments: age, amount per day.
+calculates the amount consumed for rest of the life (based on a constant max age).
+outputs the result to the screen like so: "You will need NN to last you until the ripe old age of X"
+Call that function three times, passing in different values each time.
+Bonus: Accept floating point values for amount per day, and round the result to a round number. */
+
+function calcSupply(age, dailyAmount) {
+  const lifeTime = 85;
+  let lifeSupply = (lifeTime - age) * dailyAmount;
+  document.querySelector('#lifetime-sypply').innerHTML += 'You will need ' + lifeSupply
+    + ' chocolate bars to last you until the ripe old age of ' + lifeTime + '.<br>';
+}
+
+calcSupply(30, 12);
+calcSupply(55, 24);
+calcSupply(70, 4);
+
+
+/* The Geometrizer
+Create 2 functions that calculate properties of a circle, using the definitions here.
+
+Create a function called calcCircumfrence:
+Pass the radius to the function.
+Calculate the circumference based on the radius, and output "The circumference is NN".
+
+Create a function called calcArea:
+Pass the radius to the function.
+Calculate the area based on the radius, and output "The area is NN".
+*/
+
+function calcCircumference(radius) {
+  return 2 * Math.PI * radius;
+}
+console.log('The circumference is ' + calcCircumference(2) + '.');
+console.log('The circumference is ' + calcCircumference(4) + '.');
+
+function calcArea(radius) {
+  return Math.PI * Math.PI * radius;
+}
+console.log('The area is ' + calcArea(3) + '.');
+console.log('The area is ' + calcArea(4) + '.');
+
+
+/* The Temperature Converter
+It's hot out! Let's make a converter based on the steps here.
+
+Create a function called celsiusToFahrenheit:
+Store a celsius temperature into a variable.
+Convert it to fahrenheit and output "NN°C is NN°F".
+
+Create a function called fahrenheitToCelsius:
+Now store a fahrenheit temperature into a variable.
+Convert it to celsius and output "NN°F is NN°C." */
+
+function celsiusToFahrenheit() {
+  let celsius = document.querySelector('#degrees-celsius').value;
+  let fahrenheit = celsius * 1.8 + 32;
+  document.querySelector('#celsius-to-fahrenheit').innerHTML =
+  celsius + ' &#8451; is ' + fahrenheit.toFixed(1) + ' &#8457;.';
+}
+
+function fahrenheitToCelsius() {
+  let fahrenheitTwo = document.querySelector('#degrees-fahrenheit').value;
+  let celsiusTwo = (fahrenheitTwo - 32) / 1.8;
+  document.querySelector('#fahrenheit-to-celsius').innerHTML =
+  fahrenheitTwo + ' &#8457; is ' + celsiusTwo.toFixed(1) + ' &#8451;.'
+}
+
+</script>
+
+</body>
+</html>

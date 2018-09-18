@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Loop While</title>
+</head>
+<body>
+
+  <form>
+    Please chose your book:<br>
+    <select id="chosenBook" onchange="checkBook()">
+      <option value="null">Please make your choice:</option>
+      <option value="0">DCI Guided Tour</option>
+      <option value="1">JavaScript for Beginners</option>
+      <option value="2">C++</option>
+      <option value="3">Python</option>
+      <option value="4">Harry Potter</option>
+      <option value="5">Da Vinci Code</option>
+      <option value="6">Illuminaty</option>
+    </select>
+  </form>
+
+  <div id="result"></div>
+
+<script>
+let books = [
+  'DCI Guided Tour', // 0
+  'JavaScript for Beginners', // 1
+  'C++', // 2
+  'Python', // 3
+  'Harry Potter', // 4
+  'Da Vinci Code', // 5
+  'Illuminaty', // 6
+  'My Book', // 7
+];
+let unlistedBooks = books;
+
+function checkBook() {
+  let selectElement = document.querySelector('#chosenBook');
+  let resultElement = document.querySelector('#result');
+  let result = '';
+  // convert string value to the number (integer)
+  let chosenBookIndex = parseInt(selectElement.value);
+
+  // remove books one by one
+  while (hasUnlistedBooks()) {
+    console.log(unlistedBooks[0], unlistedBooks);
+    // remove first element
+    unlistedBooks.shift();
+  }
+
+  console.log(unlistedBooks);
+}
+
+function hasUnlistedBooks() {
+  if (unlistedBooks.length > 0) {
+    return true;
+  }
+
+  return false;
+}
+
+</script>
+
+
+
+
+</body>
+</html>

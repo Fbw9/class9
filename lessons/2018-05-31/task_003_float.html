@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Floats</title>
+        <style>
+            html, body {
+                padding: 10px;
+                margin: 0;
+            }
+            .container {
+                border: 5px solid lightgrey;
+                padding: 10px;
+                position: relative;
+                margin:0 auto;
+                margin-bottom: 10px;
+                max-width: 380px;
+
+            }
+            p {
+                padding: 0;
+                margin: 0;
+            }
+            .img-right {
+                float: right;
+                margin-left: 20px;
+                margin-bottom: 10px;
+                width: 200px;
+            }
+            .img-left {
+                float: left;
+                margin-right: 20px;
+                margin-bottom: 10px;
+                width: 200px;
+            }
+            .clear-both {
+                clear: both;
+            }
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            li {
+                float: left;
+            }
+
+            li a {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li a:hover {
+                background-color: #111;
+            }
+
+            .active {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <ul>
+              <li><a href="#home" class="active">Home</a></li>
+              <li><a href="#news">News</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <img src="https://www.w3schools.com/css/pineapple.jpg" class="img-right">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum,
+                nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget,
+                 auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+                 lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi,
+                 sed ullamcorper ipsum dignissim ac...
+             </p>
+             <div class="clear-both"></div>
+        </div>
+        <div class="container">
+            <img src="https://www.w3schools.com/css/pineapple.jpg" class="img-left">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum,
+                nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget,
+                 auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu,
+                 lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi,
+                 sed ullamcorper ipsum dignissim ac...
+             </p>
+             <div class="clear-both"></div>
+        </div>
+
+
+
+    </body>
+</html>

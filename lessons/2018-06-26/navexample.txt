@@ -1,0 +1,13 @@
+    <nav class="navbar navbar-expand-sm bg-info navbar-light">
+    <div class="container">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>            
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <div class="navbar-nav">
+                <a href="#" class="nav-item nav-link active">Home</a>
+                <a href="#" class="nav-item nav-link">About Us</a>
+                <a href="#" class="nav-item nav-link">Contact</a>
+                <a href="#" class="nav-item nav-link">More info</a>
+            </div>
+    </div>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Homepage</title>
+    <style>
+        html, body {
+            height: 100%;
+            padding: 0; margin: 0;
+            font-size: 14px;
+            color: #777;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+        h1, p {
+            margin: 0;
+        }
+        div {
+            box-sizing: border-box;
+        }
+        .welcome-container {
+            background: url(imgs/bg_001.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 160px 20px;
+            padding-top: 240px;
+            color: #fff;
+            height: 100%;
+        }
+        .content {
+            margin: 0 auto;
+            max-width: 800px;
+            position: relative;
+        }
+        h1 {
+            color: #FFF;
+            margin-bottom: 2rem;
+        }
+        a {
+            color: #50a1ff;
+            text-decoration: none;
+            font-size: 1.125rem;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 40px 30px;
+        }
+        .logo {
+            color: #FFF;
+            text-align: center;x
+        }
+        .logo img {
+            width: 120px;
+            margin-bottom: 40px;
+        }
+
+        .menu {
+            display: block;
+            text-align: center;
+        }
+        .menu a {
+            display: inline-block;
+            padding: 24px 0;
+            color: white;
+            text-transform: uppercase;
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 500px) {
+            .menu a {
+                color: green;
+            }
+        }
+
+        @media screen and (min-width: 600px) {
+            .menu a {
+                color: blue;
+            }
+
+            .logo-mobile img {
+                display: none;
+            }
+            .logo img {
+                display: block;
+            }
+        }
+
+        @media screen and (min-width: 700px) {
+            .menu a {
+                color: red;
+            }
+        }
+
+        @media screen and (min-width: 900px) {
+            .logo img {
+                width: 160px;
+            }
+            .logo {
+                float: left;
+                margin-bottom: 0;
+            }
+            .menu {
+                text-align: right;
+            }
+            .menu a {
+                display: inline-block;
+                padding: 24px 0;
+                color: white;
+                text-transform: uppercase;
+                margin-left: 20px;
+                font-size: 0.9rem;
+            }
+            .welcome-container {
+                padding-top: 160px;
+            }
+        }
+
+
+        .btn-custom.btn-green {
+                background-color: #28be56;
+                border-color: #28be56;
+            }
+        .btn-custom {
+            color: #FFF !important;
+            font-size: 16px;
+            line-height: 52px;
+            font-weight: 700;
+            white-space: nowrap;
+            background-color: #3498db;
+            padding: 14px 40px;
+            border: 1px solid #3498db;
+            outline: none !important;
+            border-radius: 4px;
+        }
+        .phones {
+            width: 30%;
+            float: right;
+            position: relative;
+            margin-left: 130px;
+        }
+        .black-phone {
+            width: 100%;
+            position: absolute;
+            right: 14%;
+            top: 10px;
+        }
+        .white-phone {
+            width: 100%;
+        }
+        .welcome-text {
+            display: block;
+            position: relative;
+        }
+        .welcome-text p {
+            margin-bottom: 40px;
+        }
+        .welcome-text h1 {
+            font-weight: normal;
+            padding-top: 80px;
+            font-size: 40px;
+        }
+        .margin-right-10 {
+            margin-right: 10px !important;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="content">
+            <div class="logo">
+                <a href="/">
+                    <img src="imgs/logo_001.png" alt="">
+                </a>
+            </div>
+            <div class="menu">
+                <a href="#">Products</a>
+                <a href="#">Prices</a>
+                <a href="#">Blog</a>
+                <a href="#">Team</a>
+                <a href="#">Login</a>
+                <a href="#">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="welcome-container">
+        <div class="content">
+            <div class="phones">
+                <img src="imgs/phone_001.png" class="white-phone" alt="">
+                <img src="imgs/phone_002.png" class="black-phone" alt="">
+            </div>
+            <div class="welcome-text">
+                <h1>Make your Startup web with our template,</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                    sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                    et justo duo dolores et ea rebum.
+                </p>
+                <a href="#" class="btn-custom btn-green margin-right-10">Learn More</a>
+                <a href="#" class="btn-custom">Get the App</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

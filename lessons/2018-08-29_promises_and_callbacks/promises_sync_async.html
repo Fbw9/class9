@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Promise</title>
+    <style>
+        body {
+            padding: 40px;
+            font-size: 14px;
+            font-family: Arial;
+        }
+
+        .tile {
+            border: 1px solid #cccccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        span {
+            display: none;
+        }
+
+        .loading {
+            background-color: yellow;
+        }
+
+        .loaded span {
+            display: inline !important;
+        }
+    </style>
+</head>
+<body>
+
+    <button onClick="resetTiles();loadSynchronously()">Run Synchronously</button>
+    <button onClick="resetTiles();loadAsynchronously()">Run Asynchronously</button>
+    <br><br>
+
+    <div id="content"></div>
+
+    <script>
+        let tiles = [{
+                label: 'account',
+                loading: false,
+                delay: 1000,
+            },
+            {
+                label: 'user',
+                loading: false,
+                delay: 1000,
+            },
+            {
+                label: 'posts',
+                loading: false,
+                delay: 500,
+            },
+            {
+                label: 'likes',
+                loading: false,
+                delay: 500,
+            },
+            {
+                label: 'dislikes',
+                loading: false,
+                delay: 500,
+            },
+            {
+                label: 'comments',
+                loading: false,
+                delay: 500,
+            },
+            {
+                label: 'friends',
+                loading: false,
+                delay: 500,
+            },
+        ];
+
+        function resetTiles(noMilliseconds) {
+            let content = '';
+            console.clear();
+
+            for (let i = 0; i < tiles.length; i++) {
+                if (tiles.hasOwnProperty(i)) {
+                    tiles[i]['loading'] = false;
+                    tiles[i]['delay'] = (Math.floor(Math.random() * 100) + 1) * 50;
+
+                    content += '<div id="' + tiles[i]['label'] + '" class="tile">' +
+                        tiles[i]['label'] + (noMilliseconds ? '' : ' (' + tiles[i]['delay'] + ' milliseconds)') +
+                        ' <span> - loaded</span>' +
+                        '</div>';
+                }
+            }
+
+            document.getElementById('content').innerHTML = content;
+        }
+
+        function setLoading(index) {
+            tiles[index]['loading'] = true;
+            console.log(tiles[index]['label'], 'loading...');
+            element = document.querySelector('#' + tiles[index]['label']);
+            if (element) {
+                element.classList.add('loading');
+            }
+        }
+
+        function setLoaded(index) {
+            console.log(tiles[index]['label'], 'loaded');
+            element = document.querySelector('#' + tiles[index]['label']);
+            if (element) {
+                element.classList.remove('loading');
+                element.classList.add('loaded');
+            }
+        }
+
+        function loadData(index) {
+            if (tiles.hasOwnProperty(index)) {
+                setTimeout(() => {
+                    setLoaded(index);
+                    loadSynchronously();
+                }, tiles[index]['delay']);
+            }
+        }
+
+        function loadDataWithPromise(i) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(i);
+                }, tiles[i]['delay']);
+            });
+        }
+
+        function loadSynchronously() {
+            for (let i = 0; i < tiles.length; i++) {
+                if (!tiles[i]['loading']) {
+                    setLoading(i);
+                    setTimeout(() => {
+                        loadData(i);
+                    }, 50);
+
+                    break;
+                }
+            }
+        }
+
+        function loadAsynchronously() {
+            for (let i = 0; i < tiles.length; i++) {
+                if (!tiles[i]['loading']) {
+                    setLoading(i);
+                    setTimeout(() => {
+                        loadDataWithPromise(i).then((i) => {
+                            setLoaded(i);
+                        });
+                    }, 50);
+                }
+            }
+        }
+
+        resetTiles(true);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!-- Mad Libs
+A Mad Lib is a crazy story that places your randomly chosen words (i.e. nouns, adjectives, etc) and places them into the context of a story. Start with this webpage, which has several input elements and a button: TRY TO DO THIS ONE USING event handler properties -->
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title></title>
+ </head>
+ <body>
+
+ <h1>Mad Libs</h1>
+
+ <ul>
+  <li>Noun: <input type="text" id="noun">
+  <li>Adjective: <input type="text" id="adjective">
+  <li>Someone's Name: <input type="text" id="person">
+ </ul>
+
+ <button id="lib-button">Lib it!</button>
+
+ <div id="story"></div>
+
+
+<!-- - Add a script tag to the bottom of the page for your code.
+- Add an event listener to the button so that it calls a makeMadLib function when clicked.
+- In the makeMadLib function, retrieve the current values of the form input elements, make a story from them, and output that in the story div (like "Pamela really likes pink cucumbers.")
+- Bonus, try with 'submit' instead of 'click' after you get it working.  -->
+<script>
+ function makeMadLib() {
+  let nounInput = document.getElementById("noun").value;
+  let adjectiveInput = document.getElementById("adjective").value;
+  let personInput = document.getElementById("person").value;
+  document.getElementById("story").innerHTML = personInput + " really likes " + adjectiveInput + " " + nounInput + ".";
+}
+
+let libButton = document.getElementById("lib-button");
+libButton.addEventListener("click", makeMadLib);
+</script>
+  
+   </body>
+</html>
+
+
+

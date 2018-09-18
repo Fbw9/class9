@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Callbacks</title>
+    <style>
+        body {
+            padding: 40px;
+            font-size: 14px;
+            font-family: Arial;
+        }
+
+        .post,
+        .user,
+        .comment {
+            margin-bottom: 20px;
+        }
+
+        .comment div {
+            font-size: 0.8rem;
+        }
+
+        .title,
+        .name {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <td>
+                <h1>Posts</h1>
+                <div id="posts"></div>
+            </td>
+            <td valign="top">
+                <h1>Users</h1>
+                <div id="users"></div>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function drawUsers(users) {
+            let content = '';
+            let name, email;
+            for (let i = 0; i < users.length; i++) {
+                name = users[i]['name'];
+                email = users[i]['email'];
+
+                content += '<div class="user">' +
+                    '<div class="name">' + i + '. ' + name + '</div>' +
+                    '<div>' + email + '</div>' +
+                    '</div>';
+            }
+
+            document.getElementById('users').innerHTML = content;
+        }
+
+        function drawPosts(posts) {
+            let content = '';
+            let title, body, id;
+            for (let i = 0; i < posts.length; i++) {
+                title = posts[i]['title'];
+                body = posts[i]['body'];
+                id = posts[i]['id'];
+
+                content += '<div class="post">' +
+                    '<div class="title">' + id + '. ' + title + '</div>' +
+                    '<div>' + body +
+                    ' <a href="javascript:void(0);" onclick="loadComments(' + id + ')">comments</a>' +
+                    '<div id="comments-' + id + '"></div>' +
+                    '</div>' +
+                    '</div>';
+            }
+
+            document.getElementById('posts').innerHTML = content;
+        }
+
+        function drawComments(comments) {
+            let content = '';
+            let name, body, postId;
+            for (let i = 0; i < comments.length; i++) {
+                name = comments[i]['name'];
+                body = comments[i]['body'];
+                postId = comments[i]['postId'];
+
+                content += '<div class="comment">' +
+                    '<div class="name">' + name + '</div>' +
+                    '<div>' + body + '</div>' +
+                    '</div>';
+            }
+
+            content = '<h3>Comments</h3><hr>' + content;
+
+            document.getElementById('comments-' + postId).innerHTML = content;
+        }
+
+        function loadComments(id) {
+            dataLoader(
+                'https://jsonplaceholder.typicode.com/posts/' + id + '/comments',
+                drawComments
+            );
+        }
+
+        function dataLoader(url, callback) {
+            if (typeof url !== 'string' || typeof callback !== 'function') {
+                return;
+            }
+
+            fetch(url)
+                .then((response) => response.json())
+                .then((json) => {
+                    callback(json);
+                });
+        }
+
+        dataLoader('https://jsonplaceholder.typicode.com/posts', drawPosts);
+        dataLoader('https://jsonplaceholder.typicode.com/users', drawUsers);
+    </script>
+
+
+</body>
+
+</html>

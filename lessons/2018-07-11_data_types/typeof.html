@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Null</title>
+</head>
+<body>
+
+<script>
+  let name = 'Johnny';
+  let buttonClicked = false; // boolen
+  let age = 223238.47628379; // number
+  let something = null;
+
+  console.log('age', age);
+
+  let typeOfName = typeof name;
+
+  console.log('Type of typeOfName:', typeof typeOfName);
+  console.log('Type of name:', name);
+  console.log('Type of buttonClicked:', typeof buttonClicked);
+  console.log('Type of age:', typeof age);
+  console.log('Type of something:', typeof something);
+
+  if (age === '23') {
+    console.log('age is a string');
+  }
+
+  if (age === 23) {
+    console.log('age is a number');
+  }
+
+  if (typeof age == 'number' && age == 23) {
+    console.log('age is a number');
+  }
+
+  console.log('Type of buttonClicked:', typeof buttonClicked);
+
+</script>
+
+</body>
+</html>

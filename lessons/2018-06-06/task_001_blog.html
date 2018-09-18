@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>My Blog</title>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+        }
+        body {
+            font-size: 14px;
+            color: #777;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+        .welcome-container {
+            background: url(imgs/bg_001.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 60px 0;
+            padding-bottom: 30px;
+            text-align: center;
+            color: #fff;
+        }
+        .content {
+            margin: 0 auto;
+            max-width: 600px;
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #FFF;
+            margin-bottom: 2rem;
+        }
+        a {
+            color: #50a1ff;
+            text-decoration: none;
+            font-size: 1.125rem;
+        }
+        footer {
+            background-color: rgba(0,0,0,0.3);
+            color: #666;
+            font-size: 0.875rem;
+            margin-top: 30px;
+        }
+        footer .links {
+            float: right;
+        }
+        footer .links a {
+            color: #666;
+            font-size: 0.875rem;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.3);
+            padding: 20px 30px;
+        }
+        .logo {
+            color: #FFF;
+        }
+        ul {
+            position: absolute;
+            margin: 0;
+            padding: 20px 10px;
+            top: 0;
+            right: 10px;
+        }
+        li {
+            display: inline;
+            list-style-type: none;;
+            color: #fff;
+            padding: 10px;
+        }
+        li  a {
+            color: #fff;
+            font-size: 0.975rem;
+        }
+        .post {
+            clear: both;
+            margin-bottom: 20px;
+        }
+        .post h2, .post a h2 {
+            font-weight: normal;
+            color: #666;
+        }
+        .post .action-links {
+            float: right;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+        }
+        .post .action-links a {
+            font-size: 0.875rem;
+        }
+        .post .posted-at {
+            color: #aaa;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        .post .posted-at a {
+            color: #aaa;
+            text-decoration: underline;
+            font-size: 1rem;
+        }
+        .post p {
+            margin-top: 0;
+        }
+        .post img {
+            max-width: 200px;
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+        hr {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MYBLOG</div>
+        <ul>
+            <li>
+                <a href="#">Login</a>
+            </li>
+            <li>
+                <a href="#">Sign up</a>
+            </li>
+        <ul>
+    </header>
+
+    <div class="welcome-container">
+        <div class="content">
+            <h1>Welcome to my blog!</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            </p>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="post">
+            <a href="#">
+                <h2>DU WILLST EINE FACEBOOK-GRUPPE GRÜNDEN?</h2>
+            </a>
+            <div class="action-links">
+                <a href="#">Like</a> | <a href="#">Dislike</a>
+            </div>
+            <div class="posted-at">12.12.2018 Berlin, by <a href="#">Grumpy Cat</a></div>
+            <img src="imgs/img_001.jpg" alt="">
+            <p>
+                Jeder und seine Katze hat eine Facebook-Gruppe. Du denkst
+                darüber nach, auch eine Facebook-Gruppe zu gründen?
+                Du erhoffst dir, in den Austausch mit zukünftigen Kunden zu kommen,
+                als Experte zu glänzen und viiiiiiele neue Kunden zu gewinnen.
+                Du hörst so viele Social..
+            </p>
+            <a href="#">read more &raquo;</a>
+         </div>
+
+         <hr>
+
+         <div class="post">
+             <a href="#">
+                 <h2>RICHTIGEN PREIS FÜR DEINEN ONLINE-KURS</h2>
+             </a>
+             <div class="action-links">
+                 <a href="#">Like</a> | <a href="#">Dislike</a>
+             </div>
+             <div class="posted-at">12.12.2018 Berlin, by <a href="#">Grumpy Cat</a></div>
+             <img src="imgs/img_001.jpg" alt="">
+             <p>
+                 Jeder und seine Katze hat eine Facebook-Gruppe. Du denkst
+                 darüber nach, auch eine Facebook-Gruppe zu gründen? Du erhoffst dir,
+                 in den Austausch mit zukünftigen Kunden zu kommen, als Experte zu glänzen ...
+             </p>
+             <a href="#">read more &raquo;</a>
+          </div>
+
+     </div>
+
+    </div>
+
+    <footer>
+        <div class="content">
+            <div class="links">
+                <a href="#">About me</a> |
+                <a href="#">Donations</a> |
+                <a href="#">Party time</a> |
+                <a href="#">Contact</a>
+            </div>
+
+            &copy; 2018 myblog.io<br>
+            All rights reserved.<br>
+            Photography provided by bigstockphoto.com.
+        </div>
+    </footer>
+
+</body>
+</html>

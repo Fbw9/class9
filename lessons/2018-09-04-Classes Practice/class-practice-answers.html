@@ -1,0 +1,134 @@
+
+<script>
+// PROBLEM 1: Write a JavaScript program to get the volume of a Cylinder with four decimal places using object classes.
+// Volume of a cylinder : V = πr2h
+// where r is the radius and h is the height of the cylinder.
+class Cylinder {
+  constructor(height, radius) {
+    this.height = height;
+    this.radius = radius;
+  }
+  volume() {
+    return (Math.PI * this.radius * this.radius * this.height);
+  }
+}
+
+let cyl1 = new Cylinder(10, 5);
+console.log(cyl1.volume().toFixed(4))
+
+
+
+
+
+// PROBLEM 2:
+// A) Create a class called Song() with two properties:
+//     > songName - i.e., 'A day in the Life'
+//     > bandName - i.e., 'The Beatles'
+// B) create a new instance of the class, storing it in a variable
+// C) Add two methods to the class:
+//     > countName - return the total number of words in the song name
+//     > createElement - create a new DOM element
+// D) Create an instance with the new keyword
+// E) Append the instance to the DOM
+
+
+class Song {
+  constructor(songName, bandName){
+    this._songName = songName;
+    this._bandName = bandName;
+  }
+  countName() {
+    return this._songName.split(' ').length;
+  }
+  
+  createElement() {
+    let element = document.createElement('div');
+    let text = document.createTextNode(this._songName);
+    element.appendChild(text);
+    document.body.appendChild(element);
+  }
+}
+
+let newSong = new Song('A day in the Life', 'The Beatles');
+
+newSong.createElement();
+console.log(newSong.countName());
+
+
+
+
+
+// // PROBLEM 3:
+function Dog (name) {
+  this.name = name
+}
+Dog.prototype.bark = function () {
+  console.log(this.name + ' says woof')
+}
+
+
+class Dog2 {
+  constructor(name) {
+    this._name = name;
+  }
+  bark() {
+    return `This dog ${this._name} says woof`
+  }
+}
+
+let fido2 = new Dog2('fido')
+console.log(fido2.bark());
+
+//QUESTION: I WANT MY DOG TO BARK. But it isn't :( Can you explain why it isn't?
+// TASK: Fix this using two methods we learned (i.e. classes and older syntax prototypes)
+
+
+
+
+
+
+
+
+//PROBLEM 4:
+//A)Create a class called employee with properties of first and last names and a method getName which prints out the full name.
+//B)Next, create a subclass called manager which inherits the same properties from employee and then adds an additional property called managedEmployees which will be set to a blank array.
+// C) Finally, create a method for manager called addEmployee which takes one argument, employee, and when called adds an employee to the managedEmployees array.
+// D) Bonus create a calculateAge method to employee like we did in class (you will have to add additional properties, too)
+class Employee {
+  constructor(firstName, lastName, birthYear) {
+    this._firstName = firstName;
+    this._lastName = lastName;
+    this._birthYear = birthYear;
+    this._age = null;
+  }
+  getName(){
+    return `${this._firstName} ${this._lastName}`;
+  }
+  getAge(){
+    return (new Date().getFullYear() - this._birthYear);
+  }
+}
+
+let newGuy = new Employee("George", "John", 1991)
+console.log(newGuy);
+
+class Manager extends Employee {
+  constructor(firstName, lastName) {
+    super(firstName, lastName);
+    this._managedEmployees = [];
+  }
+  addEmployee(employee){
+    return this._managedEmployees.push(employee);
+  }
+}
+
+let manager1 = new Manager("Tabitha", "Jones")
+console.log(manager1._firstName);
+manager1.addEmployee(newGuy);
+console.log(manager1._managedEmployees);
+
+let newestGuy = new Employee("Jessica", "Jacobs", 1901);
+manager1.addEmployee(newestGuy);
+console.log(manager1._managedEmployees);
+console.log(newGuy.getAge());
+</script>

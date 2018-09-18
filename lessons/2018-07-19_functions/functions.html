@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Functions</title>
+</head>
+<body>
+
+  <div id="one" class="test" style="background-color: transparent">One</div>
+  <div id="two" class="test" style="background-color: transparent">Two</div>
+  <div id="three" class="test" style="background-color: transparent">Three</div>
+
+  <button onclick="changeColor('tomato', 'one')">One tomato</button>
+  <button onclick="changeColor('blue', 'two')">Two blue</button>
+  <button onclick="changeColor('red', 'three')">Three red</button>
+
+  <br><br>
+
+    My Products:
+    <div id="product-list"></div>
+    <br>
+
+    My Favorites:<br>
+    <div id="favorites-list"></div>
+
+<script>
+
+function changeColor(color, id) {
+  console.log(color, id);
+  document.getElementById(id).style.backgroundColor = color;
+}
+
+
+let items = [
+  {
+    productId: 'toys2937293723',
+    category: 'toys',
+    name: 'Superman',
+    colors: ['#CC0000', 'pink', 'red', 'black'],
+  },
+  {
+    productId: 'food6576572323',
+    category: 'food',
+    name: 'Carrots',
+    weight: 500,
+  },
+  {
+    productId: '6576572323',
+    category: 'electronics',
+    name: 'Laptop',
+    weight: 500,
+    colors: ['white', 'black'],
+  },
+  {
+    productId: '76572323',
+    category: 'clothe',
+    name: 'T-Shirt',
+    colors: ['white', 'black'],
+    sizes: ['S', 'M', 'L', 'XL'],
+  }
+];
+
+let favorites = [
+  {
+    productId: '6576572323',
+    category: 'electronics',
+    name: 'Laptop',
+    weight: 500,
+    colors: ['white', 'black'],
+  },
+  {
+    productId: '76572323',
+    category: 'clothe',
+    name: 'T-Shirt',
+    colors: 'jhagdjasdfjasdjasjd',
+    sizes: ['S', 'M', 'L', 'XL'],
+  }
+];
+
+function wrapWithDivs(string) {
+  return '<div style="background-color: #efefef;padding:20px;margin-bottom: 10px;">' +
+  string + '</div>';
+}
+
+function showColors(colors) {
+  if (typeof colors === 'string') {
+    return '';
+  }
+
+  let result = '';
+  for (let i = 0; i < colors.length; i++) {
+    result += '<span style="background-color: ' + colors[i] + '">&nbsp;&nbsp;&nbsp;</span> ';
+  }
+
+  console.log(result);
+
+  return 'colors: ' + result;
+}
+
+function showProduct(product) {
+
+  switch (product.category) {
+    case 'toys':
+      return wrapWithDivs(product.name +' / ' + showColors(product.colors));
+    break;
+    case 'food':
+      return wrapWithDivs(
+        product.name + ' / weight: ' + product.weight
+      );
+    break;
+    case 'electronics':
+      return wrapWithDivs(
+        product.name +
+        ' / weight: ' + product.weight +
+        ' / ' + showColors(product.colors)
+      );
+    break;
+    case 'clothe':
+      return wrapWithDivs(
+        product.name +
+        ' / sizes: ' + product.sizes +
+        ' / ' + showColors(product.colors)
+      );
+    break;
+  }
+}
+
+
+let productList = '';
+for (let i = 0; i < items.length; i++) {
+  //console.log(i, items[i]);
+  productList += showProduct(items[i]);
+}
+
+document.querySelector('#product-list').innerHTML = productList;
+
+let favoriteslist = '';
+for (let i = 0; i < favorites.length; i++) {
+  favoriteslist += showProduct(favorites[i]);
+}
+
+document.querySelector('#favorites-list').innerHTML = favoriteslist;
+
+
+</script>
+
+
+</body>
+</html>

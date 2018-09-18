@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Practice</title>
+</head>
+<body>
+  <div id="restaurants"></div>
+  <button name="button" type="button" onclick="myFunction()">Order Delivery!</button>
+  <div id="delivery"></div>
+</body>
+
+<script>
+  /* The Restaurant App
+        Never forget the food at your favorite restaurant!
+
+        Create an object to hold information on your favorite restaurant. It should have properties for name (a string), opening time (a number), closing time (a number) and entrees (an array of strings).
+
+        On your html page, log the restaurant information so it looks like:
+        Oases
+        Opens: 2 pm 
+        Closes: 10 pm 
+        Entrees:
+        Falafel
+        Hummus
+        Pizza
+        Schwarma in Wrap 
+
+
+
+        BONUS: Add a "Order Delivery!" button below the information. When clicked, it should reveal additional text below it that says "Delivery not available at this time - Go to sleep" if current time is outside of the time parameters. If the restaurant is open, it should reveal "Delivery on its way!" */
+  let restaurant = {
+    name: "Oases",
+    opens: 14,
+    closes: 22,
+    entrees: ["Falafel", "Hummus", "Pizza", "Schwarma in Wrap"]
+  };
+  document.querySelector("#restaurants").innerHTML += restaurant.name + "<br>";
+  document.querySelector("#restaurants").innerHTML += "Opens: " + restaurant.opens + "<br>";
+  document.querySelector("#restaurants").innerHTML += "Closes: " + restaurant.closes + "<br>";
+  document.querySelector("#restaurants").innerHTML += "Entrees:" + "<br>";
+  let i = 0;
+  while (i < restaurant.entrees.length) {
+    document.querySelector("#restaurants").innerHTML += restaurant.entrees[i] + "<br>";
+    i++;
+  };
+
+  function myFunction() {
+    let time = 12;
+    if (time < 14 || time > 22) {
+      document.querySelector("#delivery").innerHTML = "<span style='color:red'>WE ARE CLOSED!!!!!</span>";
+    } else {
+      document.querySelector("#delivery").innerHTML = "<span style='color:green'>WE ARE OPEN!!!!!</span>";
+    }
+  };
+  /* The Reading List
+
+  Keep track of which books you read and which books you want to read!
+
+  Create an array of objects, where each object describes a book and has properties for the title (a string), author (a string), and alreadyRead (a boolean indicating if you read it yet).
+
+  Iterate through the array of books. For each book, log the book title and book author like so: "The Hobbit by J.R.R. Tolkien".
+
+  Now use an if/else statement to change the output depending on whether you read it yet or not. If you read it, log a string like 'You already read "The Hobbit" by J.R.R. Tolkien', and if not, log a string like 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'
+  */
+  let books = [{
+      title: "Crime and Punishment",
+      author: "Dostoevsky",
+      alreadyRead: true
+    },
+    {
+      title: "American War",
+      author: "Omar El Akkad",
+      alreadyRead: true
+    },
+    {
+      title: "The Subtle Art of Not Giving A F***",
+      author: "Mark Manson",
+      alreadyRead: false
+    }, {
+      title: "Searching for Sisu",
+      author: "Geordie Stewart",
+      alreadyRead: true
+    }
+  ];
+  
+  for (i=0; i < books.length; i++ ) {
+    book = books[i];
+    bookInfo = book.title + " by " + book.author;
+    if (book.alreadyRead) {
+      console.log(`You've already read ${bookInfo}`);
+    } else {
+      console.log(`You still need to read ${bookInfo}`);
+    }
+  }
+  
+  
+  console.log("Nice job today class :P")
+</script>
+</script>

@@ -1,0 +1,44 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+
+  <form action="" id="email-form">
+    <input type="text" id="email-input">
+    <input type="submit">
+  </form>
+  <div id="message"></div>
+
+<script>
+  const form = document.getElementById("email-form")
+
+  function validateEmail(email) {
+    const regex = /^[A-Za-z0-9\.\_\-]+@\w+\.[A-Za-z]{1,6}$/;
+    return regex.test(email);
+  }
+
+  function validate(event) {
+    const result = document.getElementById('message');
+    const entry = document.getElementById('email-input').value;
+
+    if(validateEmail(entry)) {
+      console.log("YAY");
+      result.innerHTML = "This is valid";
+      result.style.color = "green";
+      setTimeout(function(){form.submit()}, 5000);
+    } else {
+      result.innerHTML = "This is invalid, please resubmit";
+      result.style.color = "red";
+      event.preventDefault();
+    }
+
+  }
+
+  addEventListener("submit", validate)
+
+</script>
+</body>
+</html>
+
