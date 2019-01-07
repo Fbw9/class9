@@ -9,10 +9,6 @@ const app = express()
 // This should change depending on what name is inputted after username=
 // Hint: use app.get() here
 
-app.get('/', (req, res) => {
-  console.log(`Query param: ${req.query}`);
-  res.send(`Hello ${req.query.username}!`)
-})
 
 app.listen(3000, () => {
   console.log('To hit the endpoint, run:');
